@@ -1,14 +1,52 @@
 <html>
-<<<<<<< HEAD
   <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Glove Slap</title>
+    <link rel="stylesheet" type="text/css" href="css/override.css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <title>GameSlap</title>
   </head>
-    <body>
+  <body>
+
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><b>GAMESLAP</b></a>
+          </div>
+          <div class="collapse navbar-collapse" style>
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Slap</a>
+              </li>
+              <li>
+                <a href="#">Leaderboards</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <script type="text/javascript" src="phonegap.js"></script>
+      <script type="text/javascript" src="js/jquery-1.10.js"></script>
+      <script type="text/javascript" src="js/rails.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
       <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
       <script type="text/javascript">
@@ -82,58 +120,6 @@
 
     <p id="geolocation">Watching geolocation...</p>
   </body>
-=======
-<head>
-  <meta charset="utf-8" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <title>Hello World</title>
-</head>
-<body>
-
-  <script type="text/javascript" src="js/phonegap.js"></script>
-  <script type="text/javascript" src="js/jquery-1.10.js"></script>
-  <script type="text/javascript" src="js/rails.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
-  <script type="text/javascript">
-  app.initialize();
-
-  // Wait for device API libraries to load
-  //
-  document.addEventListener("deviceready", onDeviceReady, false);
-
-  // device APIs are available
-  //
-  function onDeviceReady() {
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  }
-
-  // onSuccess Geolocation
-  //
-  function onSuccess(position) {
-    var element = document.getElementById('geolocation');
-    element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                        'Longitude: '          + position.coords.longitude             + '<br />' +
-                        'Altitude: '           + position.coords.altitude              + '<br />' +
-                        'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                        'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                        'Heading: '            + position.coords.heading               + '<br />' +
-                        'Speed: '              + position.coords.speed                 + '<br />' +
-                        'Timestamp: '          + position.timestamp                    + '<br />';
-  }
-
-  // onError Callback receives a PositionError object
-  //
-  function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-      'message: ' + error.message + '\n');
-  }
-
-  </script>
-</body>
->>>>>>> 77e3f7428a8a262d412241c03a986b4141d15d67
 </html>
 
 <%= yield %>
