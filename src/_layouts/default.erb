@@ -1,4 +1,5 @@
 <html>
+<<<<<<< HEAD
   <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -81,6 +82,58 @@
 
     <p id="geolocation">Watching geolocation...</p>
   </body>
+=======
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <title>Hello World</title>
+</head>
+<body>
+
+  <script type="text/javascript" src="js/phonegap.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.js"></script>
+  <script type="text/javascript" src="js/rails.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+  <script type="text/javascript">
+  app.initialize();
+
+  // Wait for device API libraries to load
+  //
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+  // device APIs are available
+  //
+  function onDeviceReady() {
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  }
+
+  // onSuccess Geolocation
+  //
+  function onSuccess(position) {
+    var element = document.getElementById('geolocation');
+    element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                        'Longitude: '          + position.coords.longitude             + '<br />' +
+                        'Altitude: '           + position.coords.altitude              + '<br />' +
+                        'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                        'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                        'Heading: '            + position.coords.heading               + '<br />' +
+                        'Speed: '              + position.coords.speed                 + '<br />' +
+                        'Timestamp: '          + position.timestamp                    + '<br />';
+  }
+
+  // onError Callback receives a PositionError object
+  //
+  function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+      'message: ' + error.message + '\n');
+  }
+
+  </script>
+</body>
+>>>>>>> 77e3f7428a8a262d412241c03a986b4141d15d67
 </html>
 
 <%= yield %>
