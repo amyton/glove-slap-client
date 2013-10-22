@@ -2,6 +2,7 @@
 
   //Profile View
   window.ProfileView = Backbone.View.extend({
+    template: _.gettemplate('userInfo')
 
     initialize: function (options) {
     },
@@ -14,3 +15,6 @@
   });
 
 });();
+
+ var userInfoHtml = $('#templates .userInfo').html();
+ var userInfo = _.template(userInfoHtml);
