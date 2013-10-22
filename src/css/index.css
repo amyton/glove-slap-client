@@ -47,6 +47,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
+    box-shadow: 10px 10px 5px #888888;
     background:url(http://static.tvtome.com/images/genie_images/news_hub/uploaded/NicholasCampbnews137243765781/busterbighand.jpg) no-repeat center top;
     /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
@@ -114,3 +115,10 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+.navbar {
+    box-shadow: 10px 10px 5px #888888;
+}
+
+
+
