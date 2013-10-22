@@ -2,5 +2,4 @@
   var user = new User();
 
   
-
 });();
