@@ -1,8 +1,14 @@
-(function () {
-  
-  var user = new Profile({
-  });
+var user = new Profile({
+});
 
-  $('.userInfo').append(view.el);
+var users = new Profiles({
+});
 
-});();
+var profile = new ProfileView({
+  model: user,
+  el: '.userInfo'
+});
+
+profile.render();
+
+$('.userInfo').append(profile.el);

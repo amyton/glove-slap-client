@@ -24,16 +24,16 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-color:#813131;
+    background-image:linear-gradient(top, #A7A7A7 0%, #813131 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #813131 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #813131 51%);
     background-image:-webkit-gradient(
         linear,
         left top,
         left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
+        color-stop(0, #701414),
+        color-stop(1.01, #813131)
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -47,8 +47,8 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    box-shadow: 10px 10px 5px #888888;
-    background:url(http://static.tvtome.com/images/genie_images/news_hub/uploaded/NicholasCampbnews137243765781/busterbighand.jpg) no-repeat center top;
+    box-shadow: 10px 10px 5px #380f0d;
+    background:url(http://images2.wikia.nocookie.net/__cb20120412005819/arresteddevelopment/images/7/78/Publicity_-_S2_-_Buster.jpeg) no-repeat center top;
     /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
@@ -117,8 +117,23 @@ h1 {
 }
 
 .navbar {
-    box-shadow: 10px 10px 5px #888888;
+    background-color: #502d2b;
+    box-shadow: 10px 10px 5px #380f0d;
 }
 
+.navbar-default {
+    border-color: #502d2b;
+}
 
+.nav-title {
+    color: #f1e8ca;
+}
 
+.icon-bar {
+    color: #f1e8ca;
+}
+
+.btn.btn-primary {
+    background-color: black;
+    border-color: black;
+}

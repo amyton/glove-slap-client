@@ -5,17 +5,16 @@
 
   //Profile View
   window.ProfileView = Backbone.View.extend({
-    template: _.getTemplate('userInfo')
+    className: 'userInfo',
+
+    template: _.getTemplate('userInfo'),
 
     render: function() {
-      var userInfoHtml = userInfoTemplate( this.model.toJSON() );
+      var userInfoHtml = this.template( this.model.toJSON() );
       $(this.el).html(userInfoHtml);
-
-      // this.$('.userInfo').append(view.render().el);
-      
-
     }
 
   });
 
-});();
+})();
+
