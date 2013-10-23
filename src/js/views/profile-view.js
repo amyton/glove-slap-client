@@ -5,10 +5,7 @@
 
   //Profile View
   window.ProfileView = Backbone.View.extend({
-    template: _.gettemplate('userInfo')
-
-    initialize: function (options) {
-    },
+    template: _.getTemplate('userInfo')
 
     render: function() {
       var userInfoHtml = userInfoTemplate( this.model.toJSON() );
