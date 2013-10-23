@@ -1,5 +1,8 @@
 (function () {
 
+  // var userInfoHtml = $('#templates .userInfo').html();
+  // var userInfo = _.template(userInfoHtml);
+
   //Profile View
   window.ProfileView = Backbone.View.extend({
     template: _.gettemplate('userInfo')
@@ -8,13 +11,14 @@
     },
 
     render: function() {
-      var view = new ProfileView({ model: user });
-      this.$('.userInfo').append(view.render().el);
+      var userInfoHtml = userInfoTemplate( this.model.toJSON() );
+      $(this.el).html(userInfoHtml);
+
+      // this.$('.userInfo').append(view.render().el);
+      
+
     }
 
   });
 
 });();
-
- var userInfoHtml = $('#templates .userInfo').html();
- var userInfo = _.template(userInfoHtml);

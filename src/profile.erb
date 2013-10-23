@@ -1,11 +1,12 @@
 <div>
-  <img src="gtwitterpic.jpg" />
+  <img src="/pictures/gtwitterpic.jpg" />
   <div id="templates">
-    <script class="userInfo" type="text">
-      <label>
-       {{ UserName }}
-       {{ Rank }}
-       {{ Stats }}
-      </label>
+    <script class="userInfo" type="text/template">
+      <h3>User Profile</h3>
+       <p>UserName: {{ UserName }} </p>
+       <p>Rank {{ Rank }} </p>
+       <p> Games Won / Games Played {{ Stats }} '\%' </p>
     </script>
 </div>
+
+<script src="js/views/profile-view.js"></script>

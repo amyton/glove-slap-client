@@ -1,5 +1,8 @@
 (function () {
-  var user = new User();
-
   
+  var user = new Profile({
+  });
+
+  $('.userInfo').append(view.el);
+
 });();

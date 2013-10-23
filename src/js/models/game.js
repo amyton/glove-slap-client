@@ -1,10 +1,15 @@
 (function(){
 
   //MODEL
-  window.User = Backbone.Model.extend({
-  });
+  window.Profile = Backbone.Model.extend({
+    default: {
+      'UserName': 'You',
+      'Rank': 'n00b',
+      'Games Won / Games Played': 'n/a'
+    }
+  })
 
-  window.Users = Backbone.Collection.extend({
+  window.Profiles = Backbone.Collection.extend({
 
   });
 })();
