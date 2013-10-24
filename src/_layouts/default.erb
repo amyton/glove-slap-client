@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 
 
@@ -16,8 +18,48 @@
     <title>GameSlap</title>
   </head>
   <body>
+    <header>
+    <div>  
+      <div class="header">
+        <img src="pictures/icon.png" width=50 length=50 >
+        <button class="navbar" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <i class="fa fa-list-ul"></i>
+        </button>
+        <div class="collapse navbar-collapse" style>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="profile.html">Profile</a>
+            </li>
+            <li>
+              <a href="nearby-users.html">Nearby Users</a>
+            </li>
+            <li>
+              <a href="leaderboard.html">Leaderboards</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    </header>
+    
+    <div class="body">
+      <%= yield %>
+    </div>
 
-    <div class="container">
+    <footer>
+      <div class="app">
+        <div id="deviceready" class="blink">
+          <p class="event listening">Connecting to Device</p>
+          <p class="event received">Device is Ready</p>
+        </div>
+          <p id="geolocation">Watching geolocation...</p>
+      </div>
+    </footer>
+
+
+   <!--  <div class="container">
       <div class="navbar navbar-default">
         <div class="container">
           <div class="navbar-header">
@@ -43,8 +85,8 @@
             </ul>
           </div>
         </div>
-      </div>
-      <%= yield %>
+      </div> -->
+
 
       <div id="templates">
         <%= partial 'templates' %>
@@ -134,7 +176,7 @@
     </script>
 
 
-    <p id="geolocation">Watching geolocation...</p>
+
   </body>
 </html>
 
