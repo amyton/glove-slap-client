@@ -5,10 +5,9 @@ var users = new Profiles({
 });
 
 var profile = new ProfileView({
-  model: user,
-  el: '.userInfo'
+  model: user
 });
 
-profile.render();
-
 $('.userInfo').append(profile.el);
+
+profile.render();

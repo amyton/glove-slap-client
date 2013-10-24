@@ -11,8 +11,9 @@
     }
   });
 
+  //COLLECTION
   window.Profiles = Backbone.Collection.extend({
     model: Profile
-
   });
+
 })();
