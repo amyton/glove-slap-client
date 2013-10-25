@@ -5,7 +5,10 @@
 
   //Profile View
   window.ProfileView = Backbone.View.extend({
-    className: 'userInfo',
+
+    initialize: function(options) {
+      console.log('I\'m working');
+    },
 
     template: _.getTemplate('userInfo'),
 
