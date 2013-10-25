@@ -3,11 +3,11 @@
   //MODEL
   window.Profile = Backbone.Model.extend({
     defaults: {
-      UserName: 'Bob',
-      Rank: 'n00b',
+      UserName: 'GRHild',
+      Rank: 'BAMF',
       Stats: 'n/a',
-      Address: '4700 W Guadalupe Apt 351',
-      Fears: 'Spiders, dirt, uncertainty, nanobots'
+      Address: 'CoolsVille',
+      Fears: 'Dirt, Uncertainty and nanobots'
     }
   });
 

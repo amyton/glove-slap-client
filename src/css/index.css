@@ -21,17 +21,20 @@
 }*/
 
 header {
-    background-color: #fb8064;
+    background-color: #b64e2e;
     box-shadow: 0px 4px 2px -2px black;
 }
 
-img {
+span {
     text-align: center;
     margin-left: 170px;
 }
 
 .fa {
-    background-color: #fb8064;
+    background-color: #b64e2e;
+}
+.fa:hover {
+    background-color: #1f8063;
 }
 
 .header {
@@ -40,17 +43,22 @@ img {
 }
 
  .navbar {
-    background-color: #fb8064;
+    background-color: #b64e2e;
     border: 1px solid #ffffff;
     float: right;
  }
 
  .navbar:hover {
-    background-color: #75d4de;
+    background-color: #1f8063;
  }
 
 a {
     color: #ffffff;
+}
+
+a:hover {
+    background-color: #1f8063;
+    text-decoration: none;
 }
 
 body {
@@ -80,7 +88,7 @@ h4 {
 }
 
 .button:hover {
-    background-color: #75d4de;
+    background-color: #1f8063;
 }
 
 footer {
@@ -99,4 +107,23 @@ h3 {
 .userInfo {
     color: white;
     background-color: black;
+}
+
+
+/*Profile .erb css*/
+.profile-view {
+    float: left;
+}
+
+.currentInfo {
+    color: gray;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#templates {
+    display: none;
+    float: right;
+    color: blue;
 }
