@@ -26,7 +26,8 @@ header {
 }
 
 img {
-    margin-left: 60px;
+    text-align: center;
+    margin-left: 170px;
 }
 
 .fa {
@@ -54,7 +55,7 @@ a {
 
 body {
     background-color: #e1e1e1;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 h4 {
@@ -66,6 +67,7 @@ h4 {
     width: 100%;
     display: inline-block;
     margin: 0 auto;
+    text-align: center;
 }
 
 .button {
