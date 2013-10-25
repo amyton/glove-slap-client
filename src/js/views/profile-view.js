@@ -1,8 +1,5 @@
 (function () {
 
-  // var userInfoHtml = $('#templates .userInfo').html();
-  // var userInfo = _.template(userInfoHtml);
-
   //Profile View
   window.ProfileView = Backbone.View.extend({
     className: 'currentInfo',

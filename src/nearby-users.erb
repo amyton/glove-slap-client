@@ -13,8 +13,41 @@
   </head>
   
   <body>
+<div class='listProfiles'>
+  <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
+</div>
 
-      <div class="row">
+
+<script type="text/javascript">
+$(document).ready(function (argument) {
+var user = new Profile({});
+
+var users = new Profiles({
+});
+
+var profileViewList = new ProfileListView({
+  collection: users
+});
+
+profileViewList.add({
+  { name: 'Gman' },
+  { name: 'GRHild' },
+  { name: 'Bobinator' }
+});
+
+$('.listProfiles').append(profileViewList.render());
+
+profileViewList.render();
+
+)};
+
+</script>
+
+
+
+
+
+<!--       <div class="row">
         <div class="col-md-8">
           <img src="/pictures/gtwitterpic.jpg" width=200 length=200>
           </div>
@@ -62,6 +95,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>

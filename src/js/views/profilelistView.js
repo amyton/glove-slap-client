@@ -1,13 +1,14 @@
 (function () {
 
 window.ProfileListView = Backbone.View.extend({
-  tagName: 'li',
+  className: 'listProfiles',
 
   template: _.getTemplate('$profilelist'),
 
-  render: function (e) {
-    e.preventDefault();
-    $(this.el).html(this.template(this.model.toJSON)());
+  render: function () {
+    var userListHtml = this.template(this.model.toJSON());
+    $(this.el).html(userListHtml);
+
   }
   
 });

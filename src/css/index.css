@@ -21,7 +21,7 @@
 }*/
 
 header {
-    background-color: #b64e2e;
+    background-color: #fb8064;
     box-shadow: 0px 4px 2px -2px black;
 }
 
@@ -31,10 +31,10 @@ span {
 }
 
 .fa {
-    background-color: #b64e2e;
+    background-color: #fb8064;
 }
 .fa:hover {
-    background-color: #1f8063;
+    background-color: #3d629a;
 }
 
 .header {
@@ -43,13 +43,13 @@ span {
 }
 
  .navbar {
-    background-color: #b64e2e;
+    background-color: #fb8064;
     border: 1px solid #ffffff;
     float: right;
  }
 
  .navbar:hover {
-    background-color: #1f8063;
+    background-color: #3d629a;
  }
 
 a {
@@ -57,7 +57,7 @@ a {
 }
 
 a:hover {
-    background-color: #1f8063;
+    background-color: #3d629a;
     text-decoration: none;
 }
 
@@ -88,7 +88,7 @@ h4 {
 }
 
 .button:hover {
-    background-color: #1f8063;
+    background-color: #3d629a;
 }
 
 footer {
