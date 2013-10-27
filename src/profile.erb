@@ -1,0 +1,28 @@
+
+<div class="profile-view">  
+  <h3>Current User</h3>
+  <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
+  </p>
+</div>
+
+
+
+<script type="text/javascript">
+// Page-specific code
+$(document).ready(function (argument) {
+
+  var user = new Profile({
+  });
+
+  var profileView = new ProfileView({
+    model: user
+  });
+
+  console.log('User:', user);
+
+  $('.profile-view').append(profileView.el);
+
+  profileView.render();
+
+});
+</script>
