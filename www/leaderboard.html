@@ -3,7 +3,6 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
@@ -15,15 +14,18 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
     <title>GameSlap</title>
   </head>
   <body>
     <header>
-    <div>  
+    <div>
       <div class="header">
-        <span><img src="pictures/icon.png" width=50 length=50 ></span>
+        <span><img class="logo" src="img/GameSlap-Logo2.png" width="40" height="auto"></span>
         <button class="navbar" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-list-ul"></i>
+        <i class="fa fa-list-ul fa-2x"></i>
         </button>
         <div class="collapse navbar-collapse" style>
           <ul>
@@ -43,7 +45,7 @@
         </div>
     </div>
     </header>
-    
+
     <div class="body">
       <div>
   This guy is top:
@@ -63,26 +65,50 @@
 
     </div>
 
-    <div id='user'>
-      Append JSON data here please:
-    </div>
-
     <footer>
       <div class="app">
         <div id="deviceready" class="blink">
           <p class="event listening">Connecting to Device</p>
-          <p class="event received">Device is Ready</p>
+          <p class="event received"><!-- Device is Ready --></p>
         </div>
-          <p id="geolocation">Watching geolocation...</p>
+          <p id="geolocation"></p>
       </div>
     </footer>
 
     <script type="text/javascript">
+
+    $(document).ready(function(){
       $.ajax({
         type: 'POST',
-        url: '',
-        data: phone_id: '', location: ''
+        url: 'http://localhost:3000/api/user/location',
+        data: { phone_id: '', location: '' },
+        success: function (data) {
+          console.log('success', data);
+        }
       });
+
+      $('#user').click( function(){ 
+        $.ajax({
+          type: 'POST',
+          url: 'http://localhost:3000/api/user/2/slap',
+          data: { phone_id: '1235' },
+          success: function (data) {
+            console.log('success', data);
+          }
+        });
+      });
+
+      $('#user').on('click', function(){
+        $.ajax({
+          type: 'POST',
+          url: 'http://localhost:3000/api/slap/3/accept',
+          data: { target_id: '1234' },
+          success: function (data) {
+            console.log('success23', data);
+          }
+        });
+      });
+    });
 
       // $.getJSON('/jquery/result.json', function(user){
       //   $('#user').html('<p>Accept?' + user.accept + '</p>');

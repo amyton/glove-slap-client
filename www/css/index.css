@@ -1,28 +1,24 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-/** {
-    border: 1px solid red;
-}*/
+* {
+    font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #585050;
+}
+
+/* -----------------------------------*/
+/* ----------->>> INDEX <<<-----------*/
+/* -----------------------------------*/
+
+
+/* -----------------------------------*/
+/* --------->>> DEFAULT <<<-----------*/
+/* -----------------------------------*/
 
 header {
-    background-color: #fb8064;
-    box-shadow: 0px 4px 2px -2px black;
+    background-color: #dadada;
+    box-shadow: 0px 1px 2px -2px black;
+    height: 50px;
 }
 
 span {
@@ -30,11 +26,30 @@ span {
     margin-left: 170px;
 }
 
-.fa {
-    background-color: #fb8064;
+img.logo {
+    margin: 10px;
+    width: 100;
+    height: auto;
+    float: left;
 }
+
+.main {
+    background-color: none;
+}
+
+.fa {
+    /*background-color: #fff;*/
+    text-align: center;
+    line-height: 125px;
+    color: #fff;
+}
+
+.fa.fa-list-ul {
+    line-height: 0px
+}
+
 .fa:hover {
-    background-color: #3d629a;
+    opacity: 0.5;
 }
 
 .header {
@@ -43,32 +58,25 @@ span {
 }
 
  .navbar {
-    background-color: #fb8064;
-    border: 1px solid #ffffff;
+    background-color: #dadada;
     float: right;
- }
+    border: none;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 0px 0px rgba(0,0,0,.15);
+    box-shadow: 0 0px 0px rgba(0,0,0,.15);
+}
 
  .navbar:hover {
-    background-color: #3d629a;
- }
+    opacity: 0.5;
+}
 
 a {
-    color: #ffffff;
+    color: #12c7bc; /*turquoise*/
 }
 
 a:hover {
-    background-color: #3d629a;
+    opacity: 0.5;
     text-decoration: none;
-}
-
-body {
-    background-color: #e1e1e1;
-    /*text-align: center;*/
-}
-
-h4 {
-    text-align: center;
-
 }
 
 .body {
@@ -79,20 +87,21 @@ h4 {
 }
 
 .button {
-    background-color: #ffffff;
-    border-radius: 50%;
+    /*background-color: #12c7bc;*/
+    border: 1px solid #12c7bc; /*turquoise*/
+    /*border-radius: 50%;*/
     width: 150px;
     height: 150px;
-    box-shadow: 0px 4px 2px -2px #888888
-
+    border: none;
+    margin: 15px;
 }
 
 .button:hover {
-    background-color: #3d629a;
+    /*background-color: #3d629a;*/
 }
 
 footer {
-    background-color: #58595a;
+    background-color: #fff;
     position: relative;
 }
 
@@ -109,7 +118,7 @@ h3 {
     background-color: black;
 }
 
-
+/**/
 /*Profile .erb css*/
 .profile-view {
     float: left;
@@ -127,3 +136,9 @@ h3 {
     float: right;
     color: blue;
 }
+
+#geolocation {
+    color: white;
+}
+
+
