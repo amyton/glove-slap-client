@@ -1,35 +1,34 @@
-<body>
-  <div class='listProfiles'>
-    <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
-    <div id='user'>
-      <button type="tiny button">Slap</button>
-    </div>
+
+<div class="listProfiles">  
+  <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
+  <div id='user'>
+    <button type="tiny button">Slap</button>
   </div>
+</div>
 
+<script type="text/javascript">
+  $(document).ready(function (argument) {
 
-  <script type="text/javascript">
-    $(document).ready(function (argument) {
-      var user = new Profile({    
-      });
-
-      var users = new Profiles({
-      });
-
-      var profileListView = new ProfileListView({
-        collection: users
-      });
-
-      users.add([
-        { name: 'Gmoney' },
-        { name: 'GRHild' },
-      ]);
-
-      $('.listProfiles').append(profileListView.render());
-
-      profileListView.render();
-    
+    var user = new Profile({    
     });
 
-  </script>
+    var users = new Profiles({
+    });
 
-</body>
+    var profileListView = new ProfileListView({
+      collection: users,
+      el: '.listProfiles'
+    });
+
+    users.add([
+      { name: 'Gmoney' },
+      { name: 'GRHild' },
+    ]);
+
+    $('.listProfiles').append(profileListView.render());
+
+    profileListView.render();
+  
+  });
+
+</script>

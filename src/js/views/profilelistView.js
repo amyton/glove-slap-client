@@ -5,20 +5,26 @@ window.ProfileListView = Backbone.View.extend({
 
   initialize: function(options) {
     console.log('Hey!');
+    this.listenTo(this.collection, 'add', this.addProfile)
   },
 
   template: _.getTemplate('userInfo'),
 
-  // addProfile: function (profile) {
-  //   profile.view = new ProfileView({ model: profile });
+  addProfile: function (profile) {
+    var profileView = new ProfileView({ model: profile });
   
-  //   profile.view.render();
-  //   $(this.el).append( profile.view.el );
-  // },
+    profileView.render();
+    $(this.el).append( profileView.el );
+  },
 
   render: function () {
-    var userListHtml = this.template(this.collection.toJSON());
-    $(this.el).html(userListHtml);
+    console.log('Does this work??');
+    $(this.el).empty();
+    $(this.el).addClass('listProfiles');
+    this.collection.each(this.addProfile, this);
+
+    // var userListHtml = this.template(this.collection.toJSON());
+    // $(this.el).html(userListHtml);
 
     // this.collection.each(this.addProfile, this);
   }
