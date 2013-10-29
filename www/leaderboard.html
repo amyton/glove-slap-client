@@ -45,15 +45,25 @@
     </header>
     
     <div class="body">
-      <%= yield %>
+      <div>
+  This guy is top:
+  <img src="/pictures/gtwitterpic.jpg" width=300 length=300>
+  <p>He's the reigning champ and holds the ultimate title of BAMF.</p>
+</div>
+
     </div>
 
     <div id="templates">
-      <%= partial 'templates' %>
+      <script class="userInfo" type="text/template">
+  UserName:  {{ UserName }}</br>
+  Rank:  {{ Rank }}</br>
+  Address:  {{ Address }}</br>
+  Fears:  {{ Fears }}</br>
+</script>
+
     </div>
 
     <div id='user'>
-      <button type="tiny alert button">A button</button>
       Append JSON data here please:
     </div>
 
@@ -68,39 +78,11 @@
     </footer>
 
     <script type="text/javascript">
-
-    $(document).ready(function(){
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/api/user/location',
-        data: { phone_id: '', location: '' },
-        success: function (data) {
-          console.log('success', data);
-        }
+        url: '',
+        data: phone_id: '', location: ''
       });
-
-      $('#user').click( function(){ 
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/user/2/slap',
-          data: { phone_id: '1235' },
-          success: function (data) {
-            console.log('success', data);
-          }
-        });
-      });
-
-      $('#user').on('click', function(){
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/slap/3/accept',
-          data: { target_id: '1234' },
-          success: function (data) {
-            console.log('success23', data);
-          }
-        });
-      });
-    });
 
       // $.getJSON('/jquery/result.json', function(user){
       //   $('#user').html('<p>Accept?' + user.accept + '</p>');

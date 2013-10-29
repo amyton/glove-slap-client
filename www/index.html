@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/foundation.css" />
-    <link rel="stylesheet" type="text/css" href="css/override.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -16,126 +18,114 @@
     <title>GameSlap</title>
   </head>
   <body>
-
-    <div class="container">
-      <div class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand"><b>GAMESLAP</b></a>
-          </div>
-          <div class="collapse navbar-collapse" style>
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="http://www.google.com">Slap</a>
-              </li>
-              <li>
-                <a href="http://www.google.com">Leaderboards</a>
-              </li>
-            </ul>
-          </div>
+    <header>
+    <div>  
+      <div class="header">
+        <span><img src="pictures/icon.png" width=50 length=50 ></span>
+        <button class="navbar" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <i class="fa fa-list-ul"></i>
+        </button>
+        <div class="collapse navbar-collapse" style>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="profile.html">Profile</a>
+            </li>
+            <li>
+              <a href="nearby-users.html">Nearby Users</a>
+            </li>
+            <li>
+              <a href="leaderboard.html">Leaderboards</a>
+            </li>
+          </ul>
         </div>
+    </div>
+    </header>
+    
+    <div class="body">
+          
+    <div class="main button">
+      <i class="fa fa-home fa-3x"></i>
+      <h4>Home</h4>
+    </div>
+
+    <div class="main button">
+      <i class="fa fa-user fa-3x" ></i>
+      <h4>Profile</h4>
+    </div>
+
+    <div class="main button">
+      <i class="fa fa-group fa-3x"></i>
+      <h4>Users</h4>
+    </div>
+
+    <div class="main button">
+      <i class="fa fa-trophy fa-3x"></i>
+      <h4>Leaderboards</h4>
+    </div>
+
+
+      <h3>GameSlap</h3>
+ 
+    </div>
+
+    <div id="templates">
+      <script class="userInfo" type="text/template">
+  UserName:  {{ UserName }}</br>
+  Rank:  {{ Rank }}</br>
+  Address:  {{ Address }}</br>
+  Fears:  {{ Fears }}</br>
+</script>
+
+    </div>
+
+    <div id='user'>
+      Append JSON data here please:
+    </div>
+
+    <footer>
+      <div class="app">
+        <div id="deviceready" class="blink">
+          <p class="event listening">Connecting to Device</p>
+          <p class="event received">Device is Ready</p>
+        </div>
+          <p id="geolocation">Watching geolocation...</p>
       </div>
-      
-    <h3>Welcome to GameSlap</h3>
+    </footer>
 
-  <div class="app">
-    <div id="deviceready" class="blink">
-      <p class="event listening">Connecting to Device</p>
-      <p class="event received">Device is Ready</p>
-  </div>
-      
-      <!-- 3rd-party scripts -->
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="js/jquery-1.10.js"></script>
-      <script type="text/javascript" src="js/rails.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-      <!-- Globals -->
-      <script type="text/javascript" src="util.js"></script>
-      <!-- Models -->
-      <script type="text/javascript" src="js/models/game.js"></script>
-      <!-- Views -->
+    <script type="text/javascript">
+      $.ajax({
+        type: 'POST',
+        url: '',
+        data: phone_id: '', location: ''
+      });
 
-      <!-- Main Entry -->
-      <script type="text/javascript" src="js/main.js"></script>
-      <script type="text/javascript">
-
-        app.initialize();
-
-        // Wait for device API libraries to load
-        // Listens for current location of device
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        // device APIs are available
-        //
-        function onDeviceReady() {
-          navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        }
-
-        // onSuccess Geolocation
-        //
-        function onSuccess(position) {
-          var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                                'Longitude: '          + position.coords.longitude             + '<br />' +
-                                'Altitude: '           + position.coords.altitude              + '<br />' +
-                                'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                                'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                                'Heading: '            + position.coords.heading               + '<br />' +
-                                'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          + position.timestamp                    + '<br />';
-        }
-
-        // onError Callback receives a PositionError object
-        //
-        function onError(error) {
-          alert('code: '    + error.code    + '\n' +
-                'message: ' + error.message + '\n');
-        }
-
-
-        // Wait for device API libraries to load
-        // Watches and updates current location of device
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        var watchID = null;
-
-        // device APIs are available
-        //
-        function onDeviceReady() {
-          // Throw an error if no update is received every 30 seconds
-          var options = { timeout: 30000 };
-          watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-        }
-
-        // onSuccess Geolocation
-        //
-        function onSuccess(position) {
-          var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-                                'Longitude: ' + position.coords.longitude     + '<br />' +
-                                '<hr />'      + element.innerHTML;
-        }
-
-            // onError Callback receives a PositionError object
-            //
-            function onError(error) {
-              alert('code: '    + error.code    + '\n' +
-                    'message: ' + error.message + '\n');
-            }
+      // $.getJSON('/jquery/result.json', function(user){
+      //   $('#user').html('<p>Accept?' + user.accept + '</p>');
+      //   $('#user').append('<p>Phone_id:' + user.phone_id + '</p>');  
+      //   $('#user').append('<p>Slap_id:' + user.slap_id + '</p>');
+      // });
     </script>
 
+    <!-- 3rd-party scripts -->
+    <script type="text/javascript" src="vendor/underscore.js"></script>
+    <script type="text/javascript" src="vendor/backbone.js"></script>
+    <script type="text/javascript" src="js/phonegap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.js"></script>
+    <script type="text/javascript" src="js/rails.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    <!-- Globals -->
+    <script type="text/javascript" src="js/util.js"></script>
+    <!-- Models -->
+    <script type="text/javascript" src="js/models/profile.js"></script>
+    <!-- Views -->
+    <script type="text/javascript" src="js/views/profile-view.js"></script>
+    <!-- Setup -->
+    <script type="text/javascript" src="js/geolocate.js"></script>
 
-    <p id="geolocation">Watching geolocation...</p>
   </body>
 </html>
 

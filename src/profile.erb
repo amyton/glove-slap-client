@@ -5,24 +5,22 @@
   </p>
 </div>
 
-
-
 <script type="text/javascript">
 // Page-specific code
-$(document).ready(function (argument) {
+  $(document).ready(function (argument) {
 
-  var user = new Profile({
+    var user = new Profile({
+    });
+
+    var profileView = new ProfileView({
+      model: user
+    });
+
+    console.log('User:', user);
+
+    $('.profile-view').append(profileView.el);
+
+    profileView.render();
+
   });
-
-  var profileView = new ProfileView({
-    model: user
-  });
-
-  console.log('User:', user);
-
-  $('.profile-view').append(profileView.el);
-
-  profileView.render();
-
-});
 </script>

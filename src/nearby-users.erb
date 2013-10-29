@@ -1,100 +1,33 @@
-<!doctype html>
-
-<html>
-  <head>
-    <title>Nearby Users</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  </head>
-  
-  <body>
-<div class='listProfiles'>
-  <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
-</div>
+<body>
+  <div class='listProfiles'>
+    <img src="/pictures/gtwitterpic.jp/g" width=200 length=200 />
+  </div>
 
 
-<script type="text/javascript">
-$(document).ready(function (argument) {
-var user = new Profile({});
+  <script type="text/javascript">
+    $(document).ready(function (argument) {
+      var user = new Profile({    
+      });
 
-var users = new Profiles({
-});
+      var users = new Profiles({
+      });
 
-var profileViewList = new ProfileListView({
-  collection: users
-});
+      var profileListView = new ProfileListView({
+        collection: users
+      });
 
-profileViewList.add({
-  { name: 'Gman' },
-  { name: 'GRHild' },
-  { name: 'Bobinator' }
-});
+      profileListView.add([
+        { name: 'Gman' },
+        { name: 'GRHild' },
+        { name: 'Bobinator' }
+      ]);
 
-$('.listProfiles').append(profileViewList.render());
+      $('.listProfiles').append(profileListView.render());
 
-profileViewList.render();
+      profileListView.render();
+    
+    )};
 
-)};
+  </script>
 
-</script>
-
-
-
-
-
-<!--       <div class="row">
-        <div class="col-md-8">
-          <img src="/pictures/gtwitterpic.jpg" width=200 length=200>
-          </div>
-          <ul class="list-group">
-            <li class="list-group-item">Greg</li>
-            <li class="list-group-item">Rank 1 : BAMF</li>
-            <li class="list-group-item">Distance 25 ft</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <img src="/pictures/oldtimepicture.jpeg" width=200 length=200>
-          <a class="btn btn-primary">SLAP!!</a>
-          <ul class="list-group">
-            <li class="list-group-item">Greg</li>
-            <li class="list-group-item">Rank 14 : joe sixpack</li>
-            <li class="list-group-item">Distance 1.2 miles</li>
-          </ul>
-        </div>
-        <div class="col-md-8">
-          <img src="/pictures/weddingpic.jpeg" width=200 length=200>
-          <a class="btn btn-primary">SLAP!!</a>
-          <ul class="list-group">
-            <li class="list-group-item">Greg</li>
-            <li class="list-group-item">Rank 74 : n00b</li>
-            <li class="list-group-item">Distance .4 miles</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="btn-group">
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">First Link</a>
-              </li>
-              <li>
-                <a href="#">Second Link</a>
-              </li>
-              <li>
-                <a href="#">Third Link</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </body>
-</html>
+</body>
