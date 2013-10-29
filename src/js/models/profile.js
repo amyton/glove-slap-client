@@ -7,7 +7,7 @@
       Rank: 'BAMF',
       Stats: 'n/a',
       Address: 'CoolsVille',
-      Fears: 'Dirt, Uncertainty and nanobots'
+      Fears: 'Dirt, Uncertainty'
     }
   });
 

@@ -1,6 +1,9 @@
 <body>
   <div class='listProfiles'>
-    <img src="/pictures/gtwitterpic.jp/g" width=200 length=200 />
+    <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
+    <div id='user'>
+      <button type="tiny button">Slap</button>
+    </div>
   </div>
 
 
@@ -16,15 +19,14 @@
         collection: users
       });
 
-      profileListView.add([
-        { name: 'Gman' },
+      users.add([
+        { name: 'Gmoney' },
         { name: 'GRHild' },
-        { name: 'Bobinator' }
       ]);
 
       $('.listProfiles').append(profileListView.render());
 
-      profileListView.render;
+      profileListView.render();
     
     });
 

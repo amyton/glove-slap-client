@@ -68,45 +68,38 @@
     </footer>
 
     <script type="text/javascript">
-
-    $(document).ready(function(){
-      $.ajax({
-        type: 'POST',
-        url: 'http://localhost:3000/api/user/location',
-        data: { phone_id: '', location: '' },
-        success: function (data) {
-          console.log('success', data);
-        }
-      });
-
-      $('#user').click( function(){ 
+      $(document).ready(function(){
         $.ajax({
           type: 'POST',
-          url: 'http://localhost:3000/api/user/2/slap',
-          data: { phone_id: '1235' },
+          url: 'http://localhost:3000/api/user/location',
+          data: { phone_id: '', location: '' },
           success: function (data) {
             console.log('success', data);
           }
         });
-      });
 
-      $('#user').on('click', function(){
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/slap/3/accept',
-          data: { target_id: '1234' },
-          success: function (data) {
-            console.log('success23', data);
-          }
+        $('#user').click( function(){ 
+          $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/api/user/2/slap',
+            data: { phone_id: '1235' },
+            success: function (data) {
+              console.log('GRHild Slaps', data);
+            }
+          });
+        });
+
+        $('#user').on('click', function(){
+          $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/api/slap/3/accept',
+            data: { phone_id: '1234' },
+            success: function (data) {
+              console.log('Gmoney is slapped by', data);
+            }
+          });
         });
       });
-    });
-
-      // $.getJSON('/jquery/result.json', function(user){
-      //   $('#user').html('<p>Accept?' + user.accept + '</p>');
-      //   $('#user').append('<p>Phone_id:' + user.phone_id + '</p>');  
-      //   $('#user').append('<p>Slap_id:' + user.slap_id + '</p>');
-      // });
     </script>
 
     <!-- 3rd-party scripts -->
@@ -123,6 +116,7 @@
     <script type="text/javascript" src="js/models/profile.js"></script>
     <!-- Views -->
     <script type="text/javascript" src="js/views/profile-view.js"></script>
+    <script type="text/javascript" src="js/views/profilelistView.js"></script>
     <!-- Setup -->
     <script type="text/javascript" src="js/geolocate.js"></script>
 
