@@ -2,19 +2,22 @@
 
   //Profile View
   window.ProfileView = Backbone.View.extend({
-    template: _.gettemplate('userInfo')
+    className: 'currentInfo',
 
-    initialize: function (options) {
+    initialize: function(options) {
+      console.log('I\'m working');
     },
 
+    template: _.getTemplate('userInfo'),
+
     render: function() {
-      var view = new ProfileView({ model: user });
-      this.$('.userInfo').append(view.render().el);
+      console.log('I\'m definitly working.');
+      var userInfoHtml = this.template( this.model.toJSON() );
+      $(this.el).html(userInfoHtml);
     }
 
   });
 
-});();
 
- var userInfoHtml = $('#templates .userInfo').html();
- var userInfo = _.template(userInfoHtml);
+})();
+

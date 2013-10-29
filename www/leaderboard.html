@@ -15,18 +15,15 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-    <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
     <title>GameSlap</title>
   </head>
   <body>
     <header>
-    <div>
+    <div>  
       <div class="header">
-        <span><img class="logo" src="img/GameSlap-Logo2.png" width="40" height="auto"></span>
+        <span><img src="pictures/icon.png" width=50 length=50 ></span>
         <button class="navbar" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-list-ul fa-2x"></i>
+        <i class="fa fa-list-ul"></i>
         </button>
         <div class="collapse navbar-collapse" style>
           <ul>
@@ -46,17 +43,27 @@
         </div>
     </div>
     </header>
-
+    
     <div class="body">
-      <%= yield %>
+      <div>
+  This guy is top:
+  <img src="/pictures/gtwitterpic.jpg" width=300 length=300>
+  <p>He's the reigning champ and holds the ultimate title of BAMF.</p>
+</div>
+
     </div>
 
     <div id="templates">
-      <%= partial 'templates' %>
+      <script class="userInfo" type="text/template">
+  UserName:  {{ UserName }}</br>
+  Rank:  {{ Rank }}</br>
+  Address:  {{ Address }}</br>
+  Fears:  {{ Fears }}</br>
+</script>
+
     </div>
 
     <div id='user'>
-      <button type="tiny alert button">A button</button>
       Append JSON data here please:
     </div>
 
@@ -66,44 +73,16 @@
           <p class="event listening">Connecting to Device</p>
           <p class="event received">Device is Ready</p>
         </div>
-          <p id="geolocation"></p>
+          <p id="geolocation">Watching geolocation...</p>
       </div>
     </footer>
 
     <script type="text/javascript">
-
-    $(document).ready(function(){
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/api/user/location',
-        data: { phone_id: '', location: '' },
-        success: function (data) {
-          console.log('success', data);
-        }
+        url: '',
+        data: phone_id: '', location: ''
       });
-
-      $('#user').click( function(){ 
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/user/2/slap',
-          data: { phone_id: '1235' },
-          success: function (data) {
-            console.log('success', data);
-          }
-        });
-      });
-
-      $('#user').on('click', function(){
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/slap/3/accept',
-          data: { target_id: '1234' },
-          success: function (data) {
-            console.log('success23', data);
-          }
-        });
-      });
-    });
 
       // $.getJSON('/jquery/result.json', function(user){
       //   $('#user').html('<p>Accept?' + user.accept + '</p>');

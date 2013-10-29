@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/foundation.css" />
-    <link rel="stylesheet" type="text/css" href="css/override.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -16,189 +18,123 @@
     <title>GameSlap</title>
   </head>
   <body>
-
-    <div class="container">
-      <div class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand"><b>GAMESLAP</b></a>
-          </div>
-          <div class="collapse navbar-collapse" style>
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="http://www.google.com">Slap</a>
-              </li>
-              <li>
-                <a href="http://www.google.com">Leaderboards</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!doctype html>
-
-<html>
-  <head>
-    <title>Nearby Users</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  </head>
-  
-  <body>
-
-      <div class="row">
-        <div class="col-md-8">
-          <img src="https://app.divshot.com/img/placeholder-100x100.gif">
-          <a class="btn btn-primary">SLAP!!</a>
-          <div class="alert alert-warning alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <b>Warning!</b> You best check yourself, you're not looking so good.
-          </div>
-          <ul class="list-group">
-            <li class="list-group-item">Greg</li>
-            <li class="list-group-item">Rank 1 : BAMF</li>
-            <li class="list-group-item">Distance 25 ft</li>
+    <header>
+    <div>  
+      <div class="header">
+        <span><img src="pictures/icon.png" width=50 length=50 ></span>
+        <button class="navbar" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <i class="fa fa-list-ul"></i>
+        </button>
+        <div class="collapse navbar-collapse" style>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="profile.html">Profile</a>
+            </li>
+            <li>
+              <a href="nearby-users.html">Nearby Users</a>
+            </li>
+            <li>
+              <a href="leaderboard.html">Leaderboards</a>
+            </li>
           </ul>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <img src="https://app.divshot.com/img/placeholder-100x100.gif">
-          <a class="btn btn-primary">SLAP!!</a>
-          <ul class="list-group">
-            <li class="list-group-item">Greg</li>
-            <li class="list-group-item">Rank 14 : joe sixpack</li>
-            <li class="list-group-item">Distance 1.2 miles</li>
-          </ul>
-        </div>
-        <div class="col-md-8">
-          <img src="https://app.divshot.com/img/placeholder-100x100.gif">
-          <a class="btn btn-primary">SLAP!!</a>
-          <ul class="list-group">
-            <li class="list-group-item">Greg</li>
-            <li class="list-group-item">Rank 74 : n00b</li>
-            <li class="list-group-item">Distance .4 miles</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="btn-group">
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">First Link</a>
-              </li>
-              <li>
-                <a href="#">Second Link</a>
-              </li>
-              <li>
-                <a href="#">Third Link</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
-</html>
-      
-      <!-- 3rd-party scripts -->
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="js/jquery-1.10.js"></script>
-      <script type="text/javascript" src="js/rails.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-      <!-- Globals -->
-      <script type="text/javascript" src="util.js"></script>
-      <!-- Models -->
-      <script type="text/javascript" src="js/models/game.js"></script>
-      <!-- Views -->
-
-      <!-- Main Entry -->
-      <script type="text/javascript" src="js/main.js"></script>
-      <script type="text/javascript">
-
-        app.initialize();
-
-        // Wait for device API libraries to load
-        // Listens for current location of device
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        // device APIs are available
-        //
-        function onDeviceReady() {
-          navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        }
-
-        // onSuccess Geolocation
-        //
-        function onSuccess(position) {
-          var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                                'Longitude: '          + position.coords.longitude             + '<br />' +
-                                'Altitude: '           + position.coords.altitude              + '<br />' +
-                                'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                                'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                                'Heading: '            + position.coords.heading               + '<br />' +
-                                'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          + position.timestamp                    + '<br />';
-        }
-
-        // onError Callback receives a PositionError object
-        //
-        function onError(error) {
-          alert('code: '    + error.code    + '\n' +
-                'message: ' + error.message + '\n');
-        },
+    </header>
+    
+    <div class="body">
+      <body>
+  <div class='listProfiles'>
+    <img src="/pictures/gtwitterpic.jp/g" width=200 length=200 />
+  </div>
 
 
-        // Wait for device API libraries to load
-        // Watches and updates current location of device
-        document.addEventListener("deviceready", onDeviceReady, false);
+  <script type="text/javascript">
+    $(document).ready(function (argument) {
+      var user = new Profile({    
+      });
 
-        var watchID = null;
+      var users = new Profiles({
+      });
 
-        // device APIs are available
-        //
-        function onDeviceReady() {
-          // Throw an error if no update is received every 30 seconds
-          var options = { timeout: 30000 };
-          watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-        }
+      var profileListView = new ProfileListView({
+        collection: users
+      });
 
-        // onSuccess Geolocation
-        //
-        function onSuccess(position) {
-          var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-                                'Longitude: ' + position.coords.longitude     + '<br />' +
-                                '<hr />'      + element.innerHTML;
-        }
+      profileListView.add([
+        { name: 'Gman' },
+        { name: 'GRHild' },
+        { name: 'Bobinator' }
+      ]);
 
-            // onError Callback receives a PositionError object
-            //
-            function onError(error) {
-              alert('code: '    + error.code    + '\n' +
-                    'message: ' + error.message + '\n');
-            }
+      $('.listProfiles').append(profileListView.render());
+
+      profileListView.render();
+    
+    )};
+
+  </script>
+
+</body>
+    </div>
+
+    <div id="templates">
+      <script class="userInfo" type="text/template">
+  UserName:  {{ UserName }}</br>
+  Rank:  {{ Rank }}</br>
+  Address:  {{ Address }}</br>
+  Fears:  {{ Fears }}</br>
+</script>
+
+    </div>
+
+    <div id='user'>
+      Append JSON data here please:
+    </div>
+
+    <footer>
+      <div class="app">
+        <div id="deviceready" class="blink">
+          <p class="event listening">Connecting to Device</p>
+          <p class="event received">Device is Ready</p>
+        </div>
+          <p id="geolocation">Watching geolocation...</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $.ajax({
+        type: 'POST',
+        url: '',
+        data: phone_id: '', location: ''
+      });
+
+      // $.getJSON('/jquery/result.json', function(user){
+      //   $('#user').html('<p>Accept?' + user.accept + '</p>');
+      //   $('#user').append('<p>Phone_id:' + user.phone_id + '</p>');  
+      //   $('#user').append('<p>Slap_id:' + user.slap_id + '</p>');
+      // });
     </script>
 
+    <!-- 3rd-party scripts -->
+    <script type="text/javascript" src="vendor/underscore.js"></script>
+    <script type="text/javascript" src="vendor/backbone.js"></script>
+    <script type="text/javascript" src="js/phonegap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.js"></script>
+    <script type="text/javascript" src="js/rails.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    <!-- Globals -->
+    <script type="text/javascript" src="js/util.js"></script>
+    <!-- Models -->
+    <script type="text/javascript" src="js/models/profile.js"></script>
+    <!-- Views -->
+    <script type="text/javascript" src="js/views/profile-view.js"></script>
+    <!-- Setup -->
+    <script type="text/javascript" src="js/geolocate.js"></script>
 
-    <p id="geolocation">Watching geolocation...</p>
   </body>
 </html>
 
