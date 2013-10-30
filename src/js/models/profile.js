@@ -3,7 +3,7 @@
   //MODEL
   window.Profile = Backbone.Model.extend({
     defaults: {
-      UserName: 'GRHild',
+      nickname: 'GRHild',
       Rank: 'BAMF',
       Stats: 'n/a',
       Address: 'CoolsVille',

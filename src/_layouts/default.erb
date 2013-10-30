@@ -84,7 +84,7 @@
         $('#user').click( function(){ 
           $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/api/user/2/slap',
+            url: 'http://localhost:3000/api/user/1/slap',
             data: { phone_id: '1235' },
             success: function (data) {
               console.log('GRHild Slaps', data);
@@ -95,7 +95,7 @@
         $('#user').on('click', function(){
           $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/api/slap/3/accept',
+            url: 'http://localhost:3000/api/slap/2/accept',
             data: { phone_id: '1234' },
             success: function (data) {
               console.log('Gmoney is slapped by', data);
