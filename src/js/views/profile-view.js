@@ -1,3 +1,5 @@
+// generates profile view for profile page
+
 (function () {
 
   //Profile View

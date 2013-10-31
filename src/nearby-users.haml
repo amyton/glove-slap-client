@@ -1,5 +1,5 @@
 .app.nearby-users
-  .user-info
+  .listProfileInfo
     .user-avatar
       / link to profile
     .user-nickname
@@ -20,7 +20,7 @@
 
     var profileListView = new ProfileListView({
       collection: users,
-      el: '.listProfiles'
+      el: '.listProfileInfo'
     });
 
     users.add([
@@ -28,7 +28,7 @@
       { name: 'GRHild' },
     ]);
 
-    $('.listProfiles').append(profileListView.render());
+    $('.listProfileInfo').append(profileListView.render());
 
     profileListView.render();
 

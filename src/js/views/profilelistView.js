@@ -1,7 +1,9 @@
+// generates the collection of profiles for nearby users
+
 (function () {
 
 window.ProfileListView = Backbone.View.extend({
-  className: 'listProfiles',
+  className: 'listProfileInfo',
 
   initialize: function(options) {
     console.log('Hey!');
@@ -12,7 +14,7 @@ window.ProfileListView = Backbone.View.extend({
 
   addProfile: function (profile) {
     var profileView = new ProfileView({ model: profile });
-  
+
     profileView.render();
     $(this.el).append( profileView.el );
   },
@@ -20,7 +22,7 @@ window.ProfileListView = Backbone.View.extend({
   render: function () {
     console.log('Does this work??');
     $(this.el).empty();
-    $(this.el).addClass('listProfiles');
+    $(this.el).addClass('listProfileInfo');
     this.collection.each(this.addProfile, this);
 
     // var userListHtml = this.template(this.collection.toJSON());
@@ -28,7 +30,7 @@ window.ProfileListView = Backbone.View.extend({
 
     // this.collection.each(this.addProfile, this);
   }
-  
+
 });
 
 
