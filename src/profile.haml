@@ -1,14 +1,9 @@
 .app.profile
   .user-info
     .user-avatar
-    %h3.user-nickname
-    .user-location
-    .user-rank
-    #user
-      %button{:type => "tiny button"} Slap
 
 :javascript
-  / Page-specific code
+  // Page-specific code
   $(document).ready(function (argument) {
 
     var user = new Profile({
@@ -20,7 +15,7 @@
 
     console.log('User:', user);
 
-    $('.profile-view').append(profileView.el);
+    $('.user-info').append(profileView.el);
 
     profileView.render();
 

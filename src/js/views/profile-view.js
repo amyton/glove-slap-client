@@ -4,6 +4,7 @@
 
   //Profile View
   window.ProfileView = Backbone.View.extend({
+
     className: 'currentInfo',
 
     initialize: function(options) {
@@ -19,7 +20,6 @@
     }
 
   });
-
 
 })();
 
