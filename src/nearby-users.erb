@@ -1,10 +1,9 @@
-<div class="listProfiles">  
-  <img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
-
+<img src="/pictures/gtwitterpic.jpg" width=200 length=200 />
+<div class="listProfiles">   
 </div>
-  <div id='user'>
-    <button type="tiny button">Slap</button>
-  </div>
+<div id='user'>
+  <button type="tiny button">Slap</button>
+</div>
 
 <script type="text/javascript">
   $(document).ready(function (argument) {
@@ -26,6 +25,15 @@
     ]);
 
     $('.listProfiles').append(profileListView.render());
+
+    // $.ajax({
+    //   type: 'POST'
+    //   url: 'http://local:host3000/api/user'
+    //   data: { nickname: '', rank: '', img: '' }
+    //   success: function(data){
+    //     console.log('success', data);
+    //   }
+    // });
 
     profileListView.render();
   

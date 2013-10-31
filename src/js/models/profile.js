@@ -3,11 +3,9 @@
   //MODEL
   window.Profile = Backbone.Model.extend({
     defaults: {
-      nickname: 'GRHild',
+      nickname: 'GRhild',
       Rank: 'BAMF',
       Stats: 'n/a',
-      Address: 'CoolsVille',
-      Fears: 'Dirt, Uncertainty'
     }
   });
 
