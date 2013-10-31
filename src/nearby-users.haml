@@ -1,0 +1,35 @@
+.app.nearby-users
+  .user-info
+    .user-avatar
+      / link to profile
+    .user-nickname
+    .user-rank
+    .user-distance
+  #user
+    %button{:type => "tiny button"} Slap
+
+
+:javascript
+  $(document).ready(function (argument) {
+
+    var user = new Profile({
+    });
+
+    var users = new Profiles({
+    });
+
+    var profileListView = new ProfileListView({
+      collection: users,
+      el: '.listProfiles'
+    });
+
+    users.add([
+      { name: 'Gmoney' },
+      { name: 'GRHild' },
+    ]);
+
+    $('.listProfiles').append(profileListView.render());
+
+    profileListView.render();
+
+  });
