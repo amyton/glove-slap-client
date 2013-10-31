@@ -1,0 +1,149 @@
+@import "foundation.scss";
+// @import font-awesome
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #585050;
+    font-family: "Lato", sans-serif;
+}
+
+/* -----------------------------------*/
+/* ----------->>> INDEX <<<-----------*/
+/* -----------------------------------*/
+
+
+/* -----------------------------------*/
+/* --------->>> DEFAULT <<<-----------*/
+/* -----------------------------------*/
+
+header {
+    /*background-color: #dadada;*/
+    background: $secondary-color;
+    box-shadow: 0px 1px 2px -2px black;
+    height: 50px;
+}
+
+span {
+    text-align: center;
+    margin-left: 170px;
+}
+
+img.logo {
+    margin: 10px;
+    width: 100;
+    height: auto;
+    float: left;
+}
+
+.main {
+    background-color: none;
+}
+
+.fa {
+    /*background-color: #fff;*/
+    text-align: center;
+    line-height: 125px;
+    color: #fff;
+}
+
+.fa.fa-list-ul {
+    line-height: 0px
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .navbar {
+    background-color: #dadada;
+    float: right;
+    border: none;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 0px 0px rgba(0,0,0,.15);
+    box-shadow: 0 0px 0px rgba(0,0,0,.15);
+}
+
+ .navbar:hover {
+    opacity: 0.5;
+}
+
+a {
+    color: #12c7bc; /*turquoise*/
+}
+
+a:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.body {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+    /*background-color: #12c7bc;*/
+    border: 1px solid #12c7bc; /*turquoise*/
+    /*border-radius: 50%;*/
+    width: 150px;
+    height: 150px;
+    border: none;
+    margin: 15px;
+}
+
+.button:hover {
+    /*background-color: #3d629a;*/
+}
+
+footer {
+    background-color: #fff;
+    position: relative;
+}
+
+.app {
+    height: auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+.userInfo {
+    color: white;
+    background-color: black;
+}
+
+/**/
+/*Profile .erb css*/
+.profile-view {
+    float: left;
+}
+
+.currentInfo {
+    color: gray;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#templates {
+    display: none;
+    float: right;
+    color: blue;
+}
+
+#geolocation {
+    color: white;
+}
+
+
