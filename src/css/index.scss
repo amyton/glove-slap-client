@@ -8,6 +8,10 @@ $font-stack: "Lato", sans-serif;
 // $success-color: #5da423;
 
 $gray: #585050;
+$gray-blue: #556270;
+$turquoise: #59e9df;
+$coral: #FF6B6B;
+$white: #FCFEFF;
 
 h1, h2, h3, h4, h5, h6, p {
   color: $gray;
@@ -137,7 +141,7 @@ h3 {
 }
 
 #geolocation {
-  color: white;
+  display: none;
 }
 
 
@@ -217,15 +221,16 @@ h3 {
         line-height: 1em;
       }
 
-      li.sep { 
-        margin-top: 7px; 
-        padding-top: 14px; 
-        border-top: 1px solid lighten(#556270, 10%); 
+      li.sep {
+        margin-top: 7px;
+        padding-top: 14px;
+        border-top: 1px solid lighten(#556270, 10%);
       }
 
-      li.timeline:before { content: '\e805'; }
-      li.events:before { content: '\e802'; }
-      li.calendar:before { content: '\e800'; }
+      // li.home:before { content: '\e600'; }
+      // li.profile:before { content: '\e603'; }
+      // li.nearby-users:before { content: '\e601'; }
+      // li.leaderboard { content: '\e602'; }
       li.settings:before { content: '\e803'; }
       li.logout:before { content: '\e804'; }
     }
@@ -275,7 +280,7 @@ h3 {
       -webkit-transition: all 300ms;
       transition: all 300ms;
 
-      &:before { 
+      &:before {
         content: '\e801';
         display: inline-block;
         width: 36px;
