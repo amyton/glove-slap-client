@@ -7,7 +7,6 @@
 
     <meta name="viewport" content="" />
 
-
     <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
     <!-- import these in your index.scss -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
@@ -26,49 +25,43 @@
     <title>GameSlap</title>
   </head>
   <body>
-    <header>
-    <div>
-      <div class="header">
-        <span><img class="logo" src="img/GameSlap-Logo2.png" width="40" height="auto"></span>
-        <button class="navbar" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-list-ul fa-2x"></i>
-        </button>
-        <div class="collapse navbar-collapse" style>
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="profile.html">Profile</a>
-            </li>
-            <li>
-              <a href="nearby-users.html">Nearby Users</a>
-            </li>
-            <li>
-              <a href="leaderboard.html">Leaderboards</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-    </header>
 
-    <div class="body">
-      <%= yield %>
-    </div>
+    <!-- Navigation -->
+    <nav id="slide-menu">
+      <ul>
+        <li class="home">Home</li>
+        <li class="slap">Slap</li>
+        <li class="nearby">Nearby Users</li>
+        <li class="sep settings">Settings</li>
+        <li class="logout">Logout</li>
+      </ul>
+    </nav> <!-- #slide-menu -->
 
-    <div id="templates">
-      <%= partial 'templates' %>
-    </div>
+    <!-- Content panel -->
+    <div id="content">
+      <div class="menu-trigger"></div> <!-- .menu-trigger -->
+      <h1>Amy FTW</h1>
+      <p>FTW FTW FTW Some text here pls. Chicken wings.</p>
 
-    <footer>
-      <div class="app">
-        <div id="deviceready" class="blink">
-          <p class="event listening">Connecting to Device</p>
-          <p class="event received"><!-- Device is Ready --></p>
-        </div>
-          <p id="geolocation"></p>
-      </div>
-    </footer>
+      <div class="body">
+        <%= yield %>
+      </div> <!-- .body -->
+
+      <div id="templates">
+        <%= partial 'templates' %>
+      </div> <!-- #templates -->
+
+      <footer>
+        <div class="app">
+          <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received"><!-- Device is Ready --></p>
+          </div> <!-- #deviceready -->
+            <p id="geolocation"></p>
+        </div> <!-- .app -->
+      </footer>
+    </div> <!-- #content -->
+
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -103,12 +96,28 @@
           });
         });
       });
-    </script>
+
+      // Slidemenu
+
+      (function() {
+        var $body = document.body
+        , $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+        if ( typeof $menu_trigger !== 'undefined' ) {
+          $menu_trigger.addEventListener('click', function() {
+            $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+          });
+        }
+
+      }).call(this);
+
+    </script> <!-- text/javascript -->
 
     <!-- 3rd-party scripts -->
     <script type="text/javascript" src="vendor/underscore.js"></script>
     <script type="text/javascript" src="vendor/backbone.js"></script>
     <script type="text/javascript" src="js/phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>
     <script type="text/javascript" src="js/jquery-1.10.js"></script>
     <script type="text/javascript" src="js/rails.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
