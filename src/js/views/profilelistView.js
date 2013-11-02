@@ -3,7 +3,6 @@
 (function () {
 
 window.ProfileListView = Backbone.View.extend({
-  className: 'listProfileInfo',
 
   initialize: function(options) {
     console.log('Hey!');

@@ -1,9 +1,6 @@
 .app.nearby-users
-  .listProfileInfo
-    .user-avatar
-    .user-nickname
-    .user-rank
-    .user-distance
+  .profiles
+
 
 
 :javascript
@@ -17,7 +14,7 @@
 
     var profileListView = new ProfileListView({
       collection: users,
-      el: '.listProfileInfo'
+      el: '.profiles'
     });
 
     users.add([
