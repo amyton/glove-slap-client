@@ -9,10 +9,8 @@ window.ProfileListView = Backbone.View.extend({
     this.listenTo(this.collection, 'add', this.addProfile)
   },
 
-  template: _.getTemplate('userInfo'),
-
   addProfile: function (profile) {
-    var profileView = new ProfileView({ model: profile });
+    var profileView = new ProfileView({ model: profile, type: 'mini' });
 
     profileView.render();
     $(this.el).append( profileView.el );
@@ -23,12 +21,9 @@ window.ProfileListView = Backbone.View.extend({
     $(this.el).empty();
     $(this.el).addClass('listProfileInfo');
     this.collection.each(this.addProfile, this);
-
-    // var userListHtml = this.template(this.collection.toJSON());
-    // $(this.el).html(userListHtml);
-
-    // this.collection.each(this.addProfile, this);
   }
+
+  // good job, greg!
 
 });
 
