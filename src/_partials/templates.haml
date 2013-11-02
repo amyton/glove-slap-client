@@ -1,12 +1,11 @@
 %script.mini-user-profile{:type => "text/template"}
-  .profile.row
-    .small-6.columns
-      %img{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
-    .small-6.columns
-      %h3.user-nickname {{ nickname }}
-      %h3.user-rank {{ Rank }}
-      #user
-        %button{:type => "tiny button"} SLAP
+  .small-6.columns
+    %img{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
+  .small-6.columns
+    %h4.user-nickname {{ nickname }}
+    %p.user-rank {{ Rank }}
+    #user
+      %button{:type => "tiny button"} SLAP
 
 %script.full-user-profile{:type => "text/template"}
   .profile
