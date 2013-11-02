@@ -18,18 +18,10 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: $font-stack
 }
 
-.main {
-  background-color: none;
-}
-
 .fa {
   text-align: center;
   line-height: 125px;
   color: #fff;
-}
-
-.fa.fa-list-ul {
-  line-height: 0px
 }
 
 .body {
@@ -47,14 +39,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 15px;
 }
 
-footer {
-  display: none;
-}
-
-h3 {
-  text-align: center;
-}
-
 .currentInfo {
   color: gray;
   text-align: left;
@@ -68,7 +52,7 @@ h3 {
   color: blue;
 }
 
-#geolocation {
+footer {
   display: none;
 }
 
