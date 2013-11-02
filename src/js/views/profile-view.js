@@ -14,7 +14,7 @@
     template: _.getTemplate('userInfo'),
 
     render: function() {
-      console.log('I\'m definitly working.');
+      console.log('I\'m definitely working.');
       var userInfoHtml = this.template( this.model.toJSON() );
       $(this.el).html(userInfoHtml);
     }
