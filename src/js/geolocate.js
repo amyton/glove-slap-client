@@ -16,11 +16,7 @@ function onSuccess(position) {
   var element = document.getElementById('geolocation');
     element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
                         'Longitude: '          + position.coords.longitude             + '<br />' +
-                        'Altitude: '           + position.coords.altitude              + '<br />' +
                         'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                        'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                        'Heading: '            + position.coords.heading               + '<br />' +
-                        'Speed: '              + position.coords.speed                 + '<br />' +
                         'Timestamp: '          + position.timestamp                    + '<br />';
 }
 
@@ -30,6 +26,10 @@ function onError(error) {
   alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');
 }
+
+
+
+
 
 
 // Wait for device API libraries to load
@@ -61,3 +61,41 @@ function onError(error) {
   alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');
 }
+
+
+
+
+// // Gives coordinates of user (lat, long etc.)
+// document.addEventListener("deviceready", onDeviceReady, false);
+
+// // Cordova is loaded and Ready
+// //
+// function onDeviceReady() {
+//     navigator.geolocation.getCurrentPosition(onSuccess, onError);
+// }
+
+// // Display `Position` properties from the geolocation
+// //
+// function onSuccess(position) {
+//     var div = document.getElementById('myDiv');
+
+//     div.innerHTML = 'Latitude: '             + position.coords.latitude  + '<br/>' +
+//                     'Longitude: '            + position.coords.longitude + '<br/>' +
+//                     'Accuracy: '             + position.coords.accuracy  + '<br/>';
+// }
+
+// // Show an alert if there is a problem getting the geolocation
+// //
+// function onError() {
+//     alert('onError!');
+// }
+
+
+
+
+
+
+
+
+
+

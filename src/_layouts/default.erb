@@ -3,10 +3,9 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
 
- <!--    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" /> -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 
-    <meta name="viewport" content="width=device-width" />
-
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/frameworks/bootstrap/3.0.0/themes/white-plum/bootstrap.min.css">
     <!-- import these in your index.scss -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="css/foundation.css" /> -->
@@ -68,9 +67,11 @@
           </div> <!-- #deviceready -->
             <p id="geolocation"></p>
         </div> <!-- .app -->
+        <div id="test">
+          <p><a href="#" onclick="showPrompt(); return false;">Show Prompt</a></p>
+        </div>
       </footer>
     </div> <!-- #content -->
-
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -104,6 +105,26 @@
             }
           });
         });
+
+
+
+// var currentUserId = 
+// ajax method to return coordinates every 5 seconds
+      //   $.ajax({
+      //     type: 'POST',
+      //     url: '/',
+      //     data: { latitude: '', longitude: '' },
+      //     current: function () {
+      //       var num = 0, style = document.getElementById('#mydiv').style;
+      //       window.setInterval(function (){
+      //       // increase num by 1, reset to 0 at 4(infinite loop)
+      //       num = (num + 1) % 4;
+      //       alert('PLEASEEEEEE');
+      //       style.marginLeft = (-600 * num) + "px";
+      //       }, 5000); //repeat polling every 5 seconds
+      //     },
+      //   });
+
       });
 
       // Slidemenu
@@ -141,6 +162,7 @@
     <script type="text/javascript" src="js/views/profilelistView.js"></script>
     <!-- Setup -->
     <script type="text/javascript" src="js/geolocate.js"></script>
+    <script type="text/javascript" src="js/notification.js"></script>
 
   </body>
 </html>
