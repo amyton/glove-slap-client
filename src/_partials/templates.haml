@@ -1,3 +1,4 @@
+// View for Leaderboard and Nearby Users mini profiles
 %script.mini-user-profile{:type => "text/template"}
   .small-6.columns
     %img{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
@@ -7,10 +8,11 @@
     #user
       %button{:type => "tiny button"} SLAP
 
+// View for current User Profile
 %script.full-user-profile{:type => "text/template"}
   .profile
     %img{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
-    %h3.user-nickname {{ nickname }}
+    %h2.user-nickname {{ nickname }}
     %h3.user-rank {{ Rank }}
     #user
       %button{:type => "tiny button"} SLAP
