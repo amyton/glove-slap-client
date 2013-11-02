@@ -1,5 +1,5 @@
 .app.profile
-  .user-info
+  .user-profile
     .user-avatar
 
 :javascript
@@ -10,12 +10,13 @@
     });
 
     var profileView = new ProfileView({
-      model: user
+      model: user,
+      type: 'full'
     });
 
     console.log('User:', user);
 
-    $('.user-info').append(profileView.el);
+    $('.user-profile').append(profileView.el);
 
     profileView.render();
 
