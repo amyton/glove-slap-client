@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: fixed;
     width: 100%;
     opacity: 0.9;
+    top: 0;
     z-index: 1;
   }
 
@@ -53,16 +54,16 @@ h1, h2, h3, h4, h5, h6, p {
     width: 150px;
   }
 
-footer {
-  // display: none;
-}
+  footer {
+    // display: none;
+  }
 
 // View boxes /////////////////////////////////////////////////////
-.listProfileInfo .profile {
-    background-color: $white;
-    border: 1px solid #ddd;
-    box-shadow: 1px 1px 3px #ddd;
-  }
+  .listProfileInfo .profile {
+      background-color: $white;
+      border: 1px solid #ddd;
+      box-shadow: 1px 1px 3px #ddd;
+    }
 
 // INDEX.HAML /////////////////////////////////////////////////////
 
@@ -73,15 +74,18 @@ footer {
 
 // PROFILE.HAML ///////////////////////////////////////////////////
 
+  .profile {
+    background-color: $white;
+  }
 
 //TEMPLATES.HAML ///////////////////////////////////////////////////
 
-img {
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  margin: 10px 0;
-}
+  img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 10px 0;
+  }
 
 // SLIDE NAV //////////////////////////////////////////////////////
 
@@ -185,7 +189,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding-top: 50px;
     overflow: scroll;
     background: $white;
     border-radius: 0;
