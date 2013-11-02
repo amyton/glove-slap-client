@@ -1,7 +1,6 @@
 @import "foundation.scss";
 // @import font-awesome
 
-$font-stack: "Lato", sans-serif;
 // $primary-color: #12c7bc; turquoise
 // $secondary-color: #e9e9e9; light gray
 // $alert-color: #c60f13;
@@ -9,52 +8,67 @@ $font-stack: "Lato", sans-serif;
 
 $gray: #585050;
 $gray-blue: #556270;
+$gray-text: #5b5b5b; // text gray!
 $turquoise: #59e9df;
 $coral: #FF6B6B;
 $white: #FCFEFF;
 
 h1, h2, h3, h4, h5, h6, p {
   color: $gray;
-  font-family: $font-stack
 }
 
-.fa {
-  text-align: center;
-  line-height: 125px;
-  color: #fff;
-}
+// Header - Nav Top Bar ////////////////////////////////////////////
 
-.body {
-  width: 100%;
-  display: inline-block;
-  margin: 0 auto;
-  text-align: center;
-}
+  .header {
+    background-color: $white;
+    height: 50px;
+  }
 
-.button {
-  border: 1px solid #12c7bc; /*turquoise*/
-  width: 150px;
-  height: 150px;
-  border: none;
-  margin: 15px;
-}
+// Buttons on the home index page /////////////////////////////////
 
-.currentInfo {
-  color: gray;
-  text-align: left;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
+  i.fa {
+    color: #fff;
+    line-height: 125px;
+    text-align: center;
+  }
 
-#templates {
-  display: none;
-  float: right;
-  color: blue;
-}
+  .body {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .button {
+    border: none;
+    height: 150px;
+    margin: 15px;
+    width: 150px;
+  }
 
 footer {
   display: none;
 }
+
+// View boxes /////////////////////////////////////////////////////
+  .currentInfo {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 3px #ddd;
+    margin: 5px 0 5px 0;
+  }
+
+// INDEX.HAML /////////////////////////////////////////////////////
+
+
+
+
+
+
+// PROFILE.HAML ///////////////////////////////////////////////////
+
+
 
 
 // SLIDE NAV //////////////////////////////////////////////////////
@@ -151,9 +165,7 @@ footer {
   body.menu-active nav#slide-menu { left: 0px; }
   body.menu-active nav#slide-menu ul { left: 0px; opacity: 1; }
 
-/*
-  Content
-  */
+/* Content in default.erb */
 
   div#content {
     position: fixed;
@@ -161,10 +173,11 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 60px;
+    padding: 0;
     overflow: scroll;
     background: #fcfeff;
     border-radius: 0;
+    background-color: dfe5eb;
 
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -184,7 +197,7 @@ footer {
       left: 10px;
       width: 36px;
       height: 36px;
-      background: #dfe5eb;
+      // background: #dfe5eb;
       cursor: pointer;
       border-radius: 5px;
 
@@ -197,7 +210,7 @@ footer {
         display: inline-block;
         width: 36px;
         height: 36px;
-        color: black;
+        color: $coral;
         font-family: "ico";
         font-style: normal;
         font-size: 1.2em;
@@ -208,10 +221,11 @@ footer {
         line-height: 36px;
       }
 
-      &:hover { background: #556270; &:before { color: #fcfeff; } }
+      &:hover { &:before { color: $turquoise; } }
     }
   }
 
   body.menu-active div#content { left: 284px; border-radius: 7px 0 0 7px; }
   body.menu-active div#content .menu-trigger { left: 294px; }
+
 
