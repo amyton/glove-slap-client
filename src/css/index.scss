@@ -7,7 +7,7 @@
 // $success-color: #5da423;
 
 $gray: #585050;
-$gray-blue: #556270;
+$gray-bg: #e5e5e5;
 $gray-text: #5b5b5b; // text gray!
 $turquoise: #59e9df;
 $coral: #FF6B6B;
@@ -15,6 +15,15 @@ $white: #FCFEFF;
 
 h1, h2, h3, h4, h5, h6, p {
   color: $gray;
+}
+
+.body {
+  background-color: $gray-bg;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
 }
 
 // Header - Nav Top Bar ////////////////////////////////////////////
@@ -32,14 +41,6 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
   }
 
-  .body {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 5px;
-    text-align: center;
-    width: 100%;
-  }
-
   .button {
     border: none;
     height: 150px;
@@ -53,7 +54,7 @@ footer {
 
 // View boxes /////////////////////////////////////////////////////
   .currentInfo {
-    background-color: white;
+    background-color: $white;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 3px #ddd;
     margin: 5px 0 5px 0;
