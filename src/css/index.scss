@@ -71,20 +71,21 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 
-
 // PROFILE.HAML ///////////////////////////////////////////////////
 
   .user-profile {
     background-color: $white;
+    height: auto;
   }
 
 //TEMPLATES.HAML ///////////////////////////////////////////////////
 
   img {
+    border: 7px solid $turquoise;
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    margin: 10px 0;
+    height: 300px;
+    margin: 25px;
+    width: 300px;
   }
 
 // SLIDE NAV //////////////////////////////////////////////////////
@@ -104,11 +105,11 @@ h1, h2, h3, h4, h5, h6, p {
   body {
     margin: 0;
     background: #556270;
-    color: #353d46;
+    color: $dark-gray;
     font: 18px/27px 'Oxygen', sans-serif;
   }
 
-  h1, h2, h3 { color: #FF6B6B; margin: 0 0 27px; }
+  h1, h2, h3 { color: $coral; margin: 0 0 27px; }
 
 /* Menu */
 
