@@ -9,6 +9,7 @@
 $gray: #585050;
 $gray-bg: #e5e5e5;
 $gray-text: #5b5b5b; // text gray!
+$dark-gray: #556270;
 $turquoise: #59e9df;
 $coral: #FF6B6B;
 $white: #FCFEFF;
@@ -31,6 +32,10 @@ h1, h2, h3, h4, h5, h6, p {
   .header {
     background-color: $white;
     height: 50px;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 1;
   }
 
 // Buttons on the home index page /////////////////////////////////
@@ -70,7 +75,14 @@ footer {
 // PROFILE.HAML ///////////////////////////////////////////////////
 
 
+//TEMPLATES.HAML ///////////////////////////////////////////////////
 
+img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 20px 0;
+}
 
 // SLIDE NAV //////////////////////////////////////////////////////
 
@@ -176,7 +188,7 @@ footer {
     height: 100%;
     padding: 0;
     overflow: scroll;
-    background: #fcfeff;
+    background: $white;
     border-radius: 0;
     background-color: dfe5eb;
 
@@ -205,13 +217,14 @@ footer {
       -moz-transition: all 300ms;
       -webkit-transition: all 300ms;
       transition: all 300ms;
+      z-index: 2;
 
       &:before {
         content: '\e801';
         display: inline-block;
         width: 36px;
         height: 36px;
-        color: $coral;
+        color: $turquoise;
         font-family: "ico";
         font-style: normal;
         font-size: 1.2em;
@@ -220,9 +233,10 @@ footer {
         text-align: center;
         text-transform: none;
         line-height: 36px;
+
       }
 
-      &:hover { &:before { color: $turquoise; } }
+      &:hover { &:before { color: $dark-gray; } }
     }
   }
 
