@@ -5,7 +5,7 @@
   //Profile View
   window.ProfileView = Backbone.View.extend({
 
-    className: 'currentInfo',
+    className: 'profile row',
 
     initialize: function(options) {
       console.log('I\'m working');
