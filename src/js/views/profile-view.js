@@ -9,13 +9,20 @@
 
     initialize: function(options) {
       console.log('I\'m working');
+      this.type = options.type;
     },
 
-    template: _.getTemplate('userInfo'),
+    miniTemplate: _.getTemplate('mini-user-profile'),
+    fullTemplate: _.getTemplate('full-user-profile'),
 
     render: function() {
       console.log('I\'m definitely working.');
-      var userInfoHtml = this.template( this.model.toJSON() );
+      if (this.type === 'mini'){
+        var userInfoHtml = this.miniTemplate( this.model.toJSON() );
+      }
+      else {
+        var userInfoHtml = this.fullTemplate( this.model.toJSON() );
+      }
       $(this.el).html(userInfoHtml);
     }
 
