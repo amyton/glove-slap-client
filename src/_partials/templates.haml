@@ -1,6 +1,9 @@
 %script.userInfo{:type => "text/template"}
-  %img.round{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
-  %h3.user-nickname {{ nickname }}
-  %h3.user-rank {{ Rank }}
-  #user
-    %button{:type => "tiny button"} SLAP
+  .profile.row
+    .small-6.columns
+      %img.round{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
+    .small-6.columns
+      %h3.user-nickname {{ nickname }}
+      %h3.user-rank {{ Rank }}
+      #user
+        %button{:type => "tiny button"} SLAP
