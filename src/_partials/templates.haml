@@ -11,7 +11,7 @@
 // View for current User Profile
 %script.full-user-profile{:type => "text/template"}
   .profile
-    %img{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
+    %img{:src => "{{ gravatarUrl }}" }
     %h2.user-nickname {{ nickname }}
     %h3.user-rank {{ Rank }}
     #user

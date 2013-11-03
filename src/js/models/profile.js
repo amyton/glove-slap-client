@@ -6,6 +6,7 @@
       nickname: 'GRhild',
       Rank: 'BAMF',
       Stats: 'n/a',
+      email: ''
     }
   });
 

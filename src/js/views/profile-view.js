@@ -17,11 +17,14 @@
 
     render: function() {
       console.log('I\'m definitely working.');
+      var gravatarUrl = 'http://www.gravatar.com/avatar/' + hex_md5('{{ email }}') + '?s=' + 300;
       if (this.type === 'mini'){
         var userInfoHtml = this.miniTemplate( this.model.toJSON() );
       }
       else {
-        var userInfoHtml = this.fullTemplate( this.model.toJSON() );
+        var data = this.model.toJSON();
+        data.gravatarUrl = "http://www.gravatar.com/avatar/" + hex_md5('amyhton@gmail.com') + "?s=300"
+        var userInfoHtml = this.fullTemplate(data);
       }
       $(this.el).html(userInfoHtml);
     }
