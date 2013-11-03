@@ -1,7 +1,7 @@
 // View for Leaderboard and Nearby Users mini profiles
 %script.mini-user-profile{:type => "text/template"}
   .small-6.columns
-    %img{:src => "http://p.lui.li/img-31102_confettisquare_j-r-med.png "}
+    %img{:src => "{{ gravatarUrl }}" }
   .small-6.columns
     %h4.user-nickname {{ nickname }}
     %p.user-rank {{ rank }}
