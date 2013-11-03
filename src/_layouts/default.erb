@@ -91,6 +91,7 @@
     <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
     <!-- Globals -->
+    <script type="text/javascript" src="js/initialize_phonegap.js"></script>
     <script type="text/javascript" src="vendor/hex_md5.js"></script>
     <script type="text/javascript" src="js/util.js"></script>
     <!-- Models -->
@@ -99,30 +100,10 @@
     <script type="text/javascript" src="js/views/profile-view.js"></script>
     <script type="text/javascript" src="js/views/profilelistView.js"></script>
     <!-- Setup -->
-    <script type="text/javascript" src="js/geolocate.js"></script>
     <script type="text/javascript" src="js/notification.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/user/location',
-          data: { phone_id: '', location: '' },
-          success: function (data) {
-            console.log('success', data);
-          }
-        });
-
-        $('#user').click( function(){
-          $.ajax({
-            type: 'POST',
-            url: 'http://localhost:3000/api/user/1/slap',
-            data: { phone_id: '1235' },
-            success: function (data) {
-              console.log('GRHild Slaps', data);
-            }
-          });
-        });
 
         $('#user').click( function(){
           $.ajax({
@@ -137,6 +118,7 @@
 
 //Ajax to post user profile information
         $('.user-profile').append( function() {
+          return;
           $.ajax({
             type: 'POST',
             url: 'http://localhost:3000/api/user/' + id + '/profile',

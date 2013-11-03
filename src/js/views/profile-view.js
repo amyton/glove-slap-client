@@ -7,6 +7,22 @@
 
     className: 'profile row',
 
+    events: {
+      'click button.slap': 'slap'
+    },
+    slap: function (e) {
+      console.log("slap button: werks", this.model.attributes);
+      return;
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/api/user/1/slap',
+        data: { phone_id: '1235' },
+        success: function (data) {
+          console.log('GRHild Slaps', data);
+        }
+      });
+    },
+
     initialize: function(options) {
       console.log('I\'m working');
       this.type = options.type;

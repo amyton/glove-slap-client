@@ -3,11 +3,10 @@
   //MODEL
   window.Profile = Backbone.Model.extend({
     defaults: {
-      id: '',
-      nickname: '',
-      Rank: '',
-      Stats: 'n/a',
-      email: ''
+      nickname: '[loading nickname]',
+      rank: '[loading rank]',
+      stats: 'n/a',
+      email: '[loading email]'
     }
   });
 

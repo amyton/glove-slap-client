@@ -5,8 +5,7 @@
   .small-6.columns
     %h4.user-nickname {{ nickname }}
     %p.user-rank {{ rank }}
-    #user
-      %button{:type => "tiny button"} SLAP
+    %button.slap{:type => "tiny button"} SLAP
 
 // View for current User Profile
 %script.full-user-profile{:type => "text/template"}
@@ -14,5 +13,4 @@
     %img{:src => "{{ gravatarUrl }}" }
     %h2.user-nickname {{ nickname }}
     %h3.user-rank {{ rank }}
-    #user
-      %button{:type => "tiny button"} SLAP
+    %button.slap{:type => "tiny button"} SLAP
