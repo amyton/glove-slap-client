@@ -10,20 +10,20 @@ function onDeviceReady() {
 
 // Show a custom alert
 //
-  function showAlert() {
-      navigator.notification.alert(
-          'You are the winner!',  // message
-          'Game Over',            // title
-          'Done'                  // buttonName
-      );
-  }
+function showAlert() {
+    navigator.notification.alert(
+        'You are the winner!',  // message
+        'Game Over',            // title
+        'Done'                  // buttonName
+    );
+}
 // Beep three times
 //
 function playBeep() {
     navigator.notification.beep(3);
 }
 
-// Vibrate for 2 seconds
+// Vibrate for 5 seconds
 //
 function vibrate() {
     navigator.notification.vibrate(5000);

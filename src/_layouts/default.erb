@@ -116,7 +116,16 @@
             }
           });
         });
-        
+
+        $.ajax({
+          type: 'POST',
+          url: 'http://localhost:3000/api/user/profile'
+          data: { nickname: '', rank: '', email: '' },
+          success: function (data) {
+            console.log('success', data);
+          }
+        });
+
       });
 
       // Slidemenu
