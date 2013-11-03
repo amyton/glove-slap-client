@@ -5,10 +5,10 @@
 
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 
-<!-- moved phonegap and cordova scripts to head to load first -->
-
-    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
-    <script type="text/javascript" src="js/phonegap.js"></script>
+    <!-- moved phonegap and cordova scripts to head to load first -->
+    <script type="text/javascript" charset="utf-8" src="vendor/cordova.js"></script>
+    <script type="text/javascript" src="vendor/phonegap.js"></script>
+    <script type="text/javascript" src="vendor/jquery-1.10.2.js"></script>
 
     <!-- import these in your index.scss -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="css/font-awesome-4.0.1/css/font-awesome.min.css">
     <!-- sass watch index.scss:index.css -->
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <title>GameSlap</title>
   </head>
@@ -71,18 +68,39 @@
           </div> <!-- #deviceready -->
             <p id="geolocation"></p>
         </div> <!-- .app -->
-    
+
         <div id="test">
 
           <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
           <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
           <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
-        
+
         </div>
-      
+
       </footer>
-    
+
     </div> <!-- #content -->
+
+
+    <!-- 3rd-party scripts -->
+    <script type="text/javascript" src="vendor/underscore.js"></script>
+    <script type="text/javascript" src="vendor/backbone.js"></script>
+
+    <script type="text/javascript" src="vendor/rails.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+
+    <!-- Globals -->
+    <script type="text/javascript" src="vendor/hex_md5.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <!-- Models -->
+    <script type="text/javascript" src="js/models/profile.js"></script>
+    <!-- Views -->
+    <script type="text/javascript" src="js/views/profile-view.js"></script>
+    <script type="text/javascript" src="js/views/profilelistView.js"></script>
+    <!-- Setup -->
+    <script type="text/javascript" src="js/geolocate.js"></script>
+    <script type="text/javascript" src="js/notification.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -145,29 +163,7 @@
 
       }).call(this);
 
-    </script> <!-- text/javascript -->
+    </script>
 
-    <!-- 3rd-party scripts -->
-    <script type="text/javascript" src="vendor/underscore.js"></script>
-    <script type="text/javascript" src="vendor/backbone.js"></script>
-
-    <script type="text/javascript" src="js/jquery-1.10.js"></script>
-    <script type="text/javascript" src="js/rails.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
-    
-    <!-- Globals -->
-    <script type="text/javascript" src="js/util.js"></script>
-    <!-- Models -->
-    <script type="text/javascript" src="js/models/profile.js"></script>
-    <!-- Views -->
-    <script type="text/javascript" src="js/views/profile-view.js"></script>
-    <script type="text/javascript" src="js/views/profilelistView.js"></script>
-    <!-- Setup -->
-    <script type="text/javascript" src="js/geolocate.js"></script>
-    <script type="text/javascript" src="js/notification.js"></script>
-    <!-- Gravatar Pics -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-    <script type="text/javascript" src="js/hex_md5.js"></script>
   </body>
 </html>
