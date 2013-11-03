@@ -2,28 +2,4 @@
   .profiles
 
 
-
-:javascript
-  $(document).ready(function (argument) {
-
-    var user = new Profile({
-    });
-
-    window.users = new Profiles({
-    });
-
-    var profileListView = new ProfileListView({
-      collection: users,
-      el: '.profiles'
-    });
-
-    users.add([
-      { name: 'Gmoney' },
-      { name: 'GRHild' },
-    ]);
-
-    $('.listProfileInfo').append(profileListView.render());
-
-    profileListView.render();
-
-  });
+%script{ :type => "text/javascript", :src => "/js/pages/nearby-users.js" }

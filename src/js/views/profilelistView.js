@@ -23,7 +23,7 @@ window.ProfileListView = Backbone.View.extend({
     this.collection.each(this.addProfile, this);
   }
 
-  // good job, greg!
+
 
 });
 

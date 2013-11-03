@@ -2,27 +2,4 @@
   .user-profile
     .user-avatar
 
-:javascript
-  // Page-specific code
-  $(document).ready(function (argument) {
-
-    var user = new Profile({
-    });
-
-    window.pubsub.on('profile-update', function (userData) {
-      console.log('i heard u', userData);
-      user.set(userData);
-    });
-
-    var profileView = new ProfileView({
-      model: user,
-      type: 'full'
-    });
-
-    console.log('User:', user);
-
-    $('.user-profile').append(profileView.el);
-
-    profileView.render();
-
-  });
+%script{ :type => "text/javascript", :src => "/js/pages/user-profile.js" }
