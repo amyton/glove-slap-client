@@ -11,3 +11,5 @@ _.mixin({
     return _.template( $('#templates .' + name).html() );
   }
 });
+
+window.pubsub = _.extend({}, Backbone.Events);

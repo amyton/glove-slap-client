@@ -106,7 +106,7 @@
           });
         });
 
-        $('#user').on('click', function(){
+        $('#user').click( function(){
           $.ajax({
             type: 'POST',
             url: 'http://localhost:3000/api/slap/2/accept',
@@ -118,15 +118,17 @@
         });
 
 //Ajax to post user profile information
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:3000/api/user/1/profile',
-          data: { nickname: '', rank: '', email: '' },
-          success: function (data) {
-            console.log('User Data!', data);
-          }
+        $('.user-profile').append( function() {
+          $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/api/user/' + id + '/profile',
+            data: { nickname: '', rank: '', email: '' },
+            success: function (data) {
+              console.log('User Data!', data);
+              window.pubsub.trigger('profile-update', data);
+            }
+          });
         });
-
       });
 
       // Slidemenu
@@ -148,7 +150,6 @@
     <!-- 3rd-party scripts -->
     <script type="text/javascript" src="vendor/underscore.js"></script>
     <script type="text/javascript" src="vendor/backbone.js"></script>
-
 
     <script type="text/javascript" src="js/jquery-1.10.js"></script>
     <script type="text/javascript" src="js/rails.js"></script>

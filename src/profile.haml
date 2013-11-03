@@ -9,6 +9,11 @@
     var user = new Profile({
     });
 
+    window.pubsub.on('profile-update', function (userData) {
+      console.log('i heard u', userData);
+      user.set(userData);
+    });
+
     var profileView = new ProfileView({
       model: user,
       type: 'full'

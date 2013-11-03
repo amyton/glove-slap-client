@@ -10,6 +10,7 @@
     initialize: function(options) {
       console.log('I\'m working');
       this.type = options.type;
+      this.listenTo(this.model, 'change', this.render);
     },
 
     miniTemplate: _.getTemplate('mini-user-profile'),
