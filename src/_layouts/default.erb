@@ -88,11 +88,15 @@
 
     <!-- MODAL -->
     <div id="myModal" class="reveal-modal">
-      <h2>Hey! Add a photo of yourself!</h2>
-      <p>Just enter in your Gravatar e-mail:</p>
-      <input type="email" placeholder="me@example.com">
-      <p><a href="https://en.gravatar.com/site/signup/">Sign up for Gravatar</a></p>
-      <a href="#" class="modal tiny button">Submit</a>
+      <form action="http://localhost:3000/api/user/gravtar" data-remote="true" method="post">
+        <h2>Hey!</h2>
+        <h3>You should really a photo of yourself!</h3>
+        <p>Just enter in your Gravatar e-mail:</p>
+        <input type="email" placeholder="me@example.com">
+        <a href="#" class="modal small button">Submit</a>
+        <p><a href="https://en.gravatar.com/site/signup/">Sign up for Gravatar</a></p>
+      </form>
+
       <a class="close-reveal-modal">&#215;</a>
     </div> <!-- #myModal -->
 
@@ -105,8 +109,8 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.reveal.js"></script>
+    <script src="vendor/foundation/foundation.js"></script>
+    <script src="vendor/foundation/foundation.reveal.js"></script>
 
     <!-- Globals -->
     <script type="text/javascript" src="js/initialize_phonegap.js"></script>
