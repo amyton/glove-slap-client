@@ -5,6 +5,8 @@ $(document).ready(function (argument) {
 
   window.users = new Profiles();
 
+  // 1. Create an instance of ProfileListView: var profileListView
+  // 2. All properties within profileListView gets put into (options) in the ProfileListView in profile-list-view.js
   var profileListView = new ProfileListView({
     collection: users,
     el: '.profiles'
