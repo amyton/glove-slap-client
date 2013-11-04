@@ -28,16 +28,21 @@
             <a href="/index">Home</a>
           </li>
           <li class="profile">
-            <a href="profile.html">My Profile</a>
+            <a href="profile.html">View Profile</a>
+          </li>
+          <li class="my-slaps">
+            <a href="my-slaps.html">My Slaps</a>
           </li>
           <li class="nearby-users">
             <a href="nearby-users.html">Nearby Users</a>
           </li>
           <li class="leaderboard">
             <a href="leaderboard.html">Leaderboard</a>
+
+
           </li>
           <li class="sep settings">
-            <a href="#">Settings</a>
+            <a href="settings.html">Settings</a>
           </li>
           <li class="logout">
             <a href="#">Logout</a>
@@ -81,6 +86,14 @@
 
     </div> <!-- #content -->
 
+    <!-- MODAL -->
+    <div id="myModal" class="reveal-modal">
+      <h2>Awesome. I have it.</h2>
+      <p class="lead">Your couch.  It is mine.</p>
+      <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+      <a class="close-reveal-modal">&#215;</a>
+    </div> <!-- #myModal -->
+
 
     <!-- 3rd-party scripts -->
     <script type="text/javascript" src="vendor/underscore.js"></script>
@@ -90,6 +103,9 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.reveal.js"></script>
+
     <!-- Globals -->
     <script type="text/javascript" src="js/initialize_phonegap.js"></script>
     <script type="text/javascript" src="vendor/hex_md5.js"></script>
@@ -98,7 +114,9 @@
     <script type="text/javascript" src="js/models/profile.js"></script>
     <!-- Views -->
     <script type="text/javascript" src="js/views/profile-view.js"></script>
-    <script type="text/javascript" src="js/views/profilelistView.js"></script>
+    <script type="text/javascript" src="js/views/profile-list-view.js"></script>
+    <script type="text/javascript" src="js/views/incoming-slap-view.js"></script>
+    <script type="text/javascript" src="js/views/slap-list-view.js"></script>
     <!-- Setup -->
     <script type="text/javascript" src="js/notification.js"></script>
 
@@ -117,6 +135,7 @@
         });
 
 //Ajax to post user profile information
+
         $('.user-profile').append( function() {
           return;
           $.ajax({
@@ -144,6 +163,11 @@
         }
 
       }).call(this);
+
+
+      // FOUNDATION MODAL
+
+      $(document).foundation();
 
     </script>
 
