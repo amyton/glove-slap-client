@@ -25,6 +25,10 @@ $(document).ready(function (argument) {
       },
       success: function (response) {
         console.log('success!', response);
+        console.log('user email:', response.user.email);
+        if (!response.user.email) {
+          $('#myModal').foundation('reveal', 'open');
+        };
         user.set(response.user);
       }
     });
