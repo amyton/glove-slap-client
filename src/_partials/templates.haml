@@ -14,3 +14,15 @@
     %h2.user-nickname {{ nickname }}
     %h3.user-rank {{ rank }}
     %button.slap{:type => "tiny button"} SLAP
+
+// View for pending slaps
+%script.pending-slap{:type => "text/template"}
+  .small-6.columns
+    %img{:src => "{{ gravatarUrl }}" }
+  .small-6.columns
+    %h4.user-nickname {{ nickname }}
+    %p.user-rank {{ rank }}
+    .small-6.columns
+      %button.accept{:type => "tiny button"} ACCEP
+    .small-6.columns
+      %button.reject{:type => "tiny button"} REJECT
