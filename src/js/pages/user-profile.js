@@ -14,6 +14,9 @@ $(document).ready(function (argument) {
 
   profileView.render();
 
+  var gravatarEmailTemplateHtml = $('#templates .gravatar-email').html();
+  var gravatarEmailTemplate = _.template(gravatarEmailTemplateHtml);
+
   window.pubsub.on('location', function () {
     $.ajax({
       type: 'POST',
@@ -26,10 +29,18 @@ $(document).ready(function (argument) {
       success: function (response) {
         console.log('success!', response);
         console.log('user email:', response.user.email);
-        if (!response.user.email) {
-          $('#myModal').foundation('reveal', 'open');
-        };
         user.set(response.user);
+        if (!response.user.email) {
+          var htmlString = gravatarEmailTemplate({ id: response.user.id });
+          console.log("html:", htmlString);
+          $('#myModal').html(htmlString);
+          $('#myModal').foundation('reveal', 'open');
+
+          $('#myModal form').on('ajax:success', function (data) {
+            $('#myModal').foundation('reveal', 'close');
+            window.location.reload();
+          });
+        };
       }
     });
   });
