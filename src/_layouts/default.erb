@@ -96,6 +96,7 @@
     <script type="text/javascript" src="vendor/backbone.js"></script>
 
     <script type="text/javascript" src="vendor/rails.js"></script>
+    <script type="text/javascript" src="vendor/PushNotification.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
@@ -122,7 +123,7 @@
         $('#user').click( function(){
           $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/api/slap/2/accept',
+            url: 'http://limitless-journey-1073.herokuapp.com/api/slap/2/accept',
             data: { phone_id: '1234' },
             success: function (data) {
               console.log('Gmoney is slapped by', data);
@@ -135,9 +136,8 @@
         $('.user-profile').append( function() {
           return;
           $.ajax({
-            type: 'POST',
-            url: 'http://localhost:3000/api/user/' + id + '/profile',
-            data: { nickname: '', rank: '', email: '' },
+            type: 'GET',
+            url: 'http://limitless-journey-1073.herokuapp.com/api/user/' + id + '/profile',
             success: function (data) {
               console.log('User Data!', data);
               window.pubsub.trigger('profile-update', data);

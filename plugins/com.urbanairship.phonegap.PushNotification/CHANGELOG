@@ -1,0 +1,76 @@
+==================================
+Version 2.1.0 - September 20, 2013
+==================================
+- Update Urban Airship iOS Library to 3.0.0, CHANGELOG: https://github.com/urbanairship/ios-library/blob/3.0.0/CHANGELOG
+- Requires Xcode 5 now
+
+==============================
+Version 2.0.1 - August 8, 2013
+==============================
+- Update Urban Airship iOS Library to 2.0.1 that fixed a bug in UAHTTPConnectionOperation 
+causing intermittent crashes during push registration.
+
+==============================
+Version 2.0.0 - July 30, 2013
+==============================
+- Updated for PhoneGap 3.0.0
+
+==============================
+Version 1.0.8 - July 23, 2013
+==============================
+- Update iOS plugin to latest UAirship release (2.0.0)
+- Fix: Fix possible crash with setQuietTime on iOS
+
+==============================
+Version 1.0.7 - June 12, 2013
+==============================
+- Fix: setAlias on Android to actually set the alias.
+- Fix: setQuietTime on iOS now sets the correct time.
+
+==============================
+Version 1.0.6 - April 22, 2013
+==============================
+- Updated to Cordova 2.6
+- Sample apps load plugin at startup
+
+=============================
+Version 1.0.5 - March 8, 2013
+=============================
+- Moved the plugin intent receiver into the plugin package (Android)
+- Properly handle the Cordova 2.3 changes to the iOS platform value
+
+=================================
+Version 1.0.4 - February 19, 2013
+=================================
+- Updated plugin to be compatible with version 2.0.4 of
+the Urban Airship Android library
+
+Version 1.0.3 - December 7, 2012
+=================================
+- FIXED: getIncoming now only returns incoming push data once
+- Improved Intent flags in Android sample application when launching
+  from a notification
+- Sample applciations now log push data to the console instead of
+  displaying alert dialogs
+
+=================================
+Version 1.0.2 - November 16, 2012
+=================================
+- Updated to PhoneGap 2.2.0
+- FIXED: App delegate surrogate handling was causing edge case issues 
+  with iOS 6 and certain plugin combinations
+- FIXED: setting an alias to an empty string results in subsequent
+  registration failures
+- Changed default value of UAPushEnabled to NO in NSUserDefaults on app launch. 
+  This only affects the iOS plugin using v1.3.5 of libUAirship.a or greater.
+  If you have used previous versions of the plugin, you should update your
+  app in order to reflect this change, in order to see the same behavior.
+
+=================================
+Version 1.0.1 - August 23, 2012
+=================================
+- FIXED: Addressed crash in the Android plugin caused by Cordova library bug when push or
+  registration events occur before the web view is initialized.
+- FIXED: Addressed JSON bug resulting in invalid push extras.
+- Removed Urban Airship library from iOS and Android sample projects. See the documentation at
+  https://docs.urbanairship.com/display/DOCS/Client%3A+PhoneGap for more information

@@ -51,4 +51,14 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
+    <feature name="PushPlugin">
+        <param name="ios-package" value="PushPlugin" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="PushNotificationPlugin">
+        <param name="ios-package" value="PushNotificationPlugin" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

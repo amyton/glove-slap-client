@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <!-- moved phonegap and cordova scripts to head to load first -->
+    <script type="text/javascript" charset="utf-8" src="vendor/cordova.js"></script>
+    <script type="text/javascript" src="vendor/phonegap.js"></script>
+    <script type="text/javascript" src="vendor/jquery-1.10.2.js"></script>
+
+    <!-- import these in your index.scss -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/foundation.css" /> -->
+    <link rel="stylesheet" href="css/font-awesome-4.0.1/css/font-awesome.min.css">
+    <!-- sass watch index.scss:index.css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <title>GameSlap</title>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+      <nav id="slide-menu">
+        <ul>
+          <li class="home">
+            <a href="/index">Home</a>
+          </li>
+          <li class="profile">
+            <a href="profile.html">View Profile</a>
+          </li>
+          <li class="my-slaps">
+            <a href="my-slaps.html">My Slaps</a>
+          </li>
+          <li class="nearby-users">
+            <a href="nearby-users.html">Nearby Users</a>
+          </li>
+          <li class="leaderboard">
+            <a href="leaderboard.html">Leaderboard</a>
+
+
+          </li>
+          <li class="sep settings">
+            <a href="settings.html">Settings</a>
+          </li>
+          <li class="logout">
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </nav> <!-- #slide-menu -->
+
+    <!-- Content panel -->
+    <div id="content">
+      <div class="menu-trigger"></div> <!-- .menu-trigger -->
+      <div class="header"></div> <!-- header -->
+      <!-- <h1>Amy FTW</h1>
+      <p>FTW FTW FTW Some text here pls. Chicken wings.</p> -->
+
+      <div class="body">
+        <div class='app nearby-users'>
+  <div class='profiles'></div>
+</div>
+<script src='/js/pages/nearby-users.js' type='text/javascript'></script>
+
+      </div> <!-- .body -->
+
+      <div id="templates">
+        <!-- / View for Leaderboard and Nearby Users mini profiles -->
+<script class='mini-user-profile' type='text/template'>
+  <div class='small-6 columns'>
+    <img src='{{ gravatarUrl }}' />
+  </div>
+  <div class='small-6 columns'>
+    <h4 class='user-nickname'>{{ nickname }}</h4>
+    <p class='user-rank'>{{ rank }}</p>
+    <button class='slap' type='tiny button'>SLAP</button>
+  </div>
+</script>
+<!-- / View for current User Profile -->
+<script class='full-user-profile' type='text/template'>
+  <div class='profile'>
+    <img src='{{ gravatarUrl }}' />
+    <h2 class='user-nickname'>{{ nickname }}</h2>
+    <h3 class='user-rank'>{{ rank }}</h3>
+    <button class='slap' type='tiny button'>SLAP</button>
+  </div>
+</script>
+<!-- / View for pending slaps -->
+<script class='pending-slap' type='text/template'>
+  <div class='small-6 columns'>
+    <img src='{{ gravatarUrl }}' />
+  </div>
+  <div class='small-6 columns'>
+    <h4 class='user-nickname'>{{ nickname }}</h4>
+    <p class='user-rank'>{{ rank }}</p>
+    <div class='small-6 columns'>
+      <button class='accept' type='tiny button'>ACCEP</button>
+    </div>
+    <div class='small-6 columns'>
+      <button class='reject' type='tiny button'>REJECT</button>
+    </div>
+  </div>
+</script>
+<!-- / Template for gravatar email -->
+<script class='gravatar-email' type='text/html'>
+  <form action='http://localhost:3000/api/user/{{ id }}/gravatar' data-remote='true' method='post'>
+    <h2>Hey!</h2>
+    <h3>You should really add a photo of yourself!</h3>
+    <p>Just enter in your Gravatar e-mail:</p>
+    <input name='email' placeholder='me@example.com' type='email' />
+    <input type='submit' value='submit' />
+    <p>
+      <a href='https://en.gravatar.com/site/signup/'>Sign up for Gravatar</a>
+    </p>
+  </form>
+  <a class='close-reveal-modal'>&#215;</a>
+</script>
+
+      </div> <!-- #templates -->
+
+      <footer>
+        <div class="app">
+          <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received"><!-- Device is Ready --></p>
+          </div> <!-- #deviceready -->
+            <p id="geolocation"></p>
+        </div> <!-- .app -->
+
+        <div id="test">
+
+          <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+          <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
+          <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+
+        </div>
+
+      </footer>
+
+    </div> <!-- #content -->
+
+    <!-- MODAL -->
+    <div id="myModal" class="reveal-modal">
+    </div> <!-- #myModal -->
+
+
+    <!-- 3rd-party scripts -->
+    <script type="text/javascript" src="vendor/underscore.js"></script>
+    <script type="text/javascript" src="vendor/backbone.js"></script>
+
+    <script type="text/javascript" src="vendor/rails.js"></script>
+    <script type="text/javascript" src="vendor/PushNotification.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+
+    <script src="vendor/foundation/foundation.js"></script>
+    <script src="vendor/foundation/foundation.reveal.js"></script>
+
+    <!-- Globals -->
+    <script type="text/javascript" src="js/initialize_phonegap.js"></script>
+    <script type="text/javascript" src="vendor/hex_md5.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <!-- Models -->
+    <script type="text/javascript" src="js/models/profile.js"></script>
+    <!-- Views -->
+    <script type="text/javascript" src="js/views/profile-view.js"></script>
+    <script type="text/javascript" src="js/views/profile-list-view.js"></script>
+    <script type="text/javascript" src="js/views/incoming-slap-view.js"></script>
+    <script type="text/javascript" src="js/views/slap-list-view.js"></script>
+    <!-- Setup -->
+    <script type="text/javascript" src="js/notification.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('#user').click( function(){
+          $.ajax({
+            type: 'POST',
+            url: 'http://limitless-journey-1073.herokuapp.com/api/slap/2/accept',
+            data: { phone_id: '1234' },
+            success: function (data) {
+              console.log('Gmoney is slapped by', data);
+            }
+          });
+        });
+
+//Ajax to post user profile information
+
+        $('.user-profile').append( function() {
+          return;
+          $.ajax({
+            type: 'GET',
+            url: 'http://limitless-journey-1073.herokuapp.com/api/user/' + id + '/profile',
+            success: function (data) {
+              console.log('User Data!', data);
+              window.pubsub.trigger('profile-update', data);
+            }
+          });
+        });
+      });
+
+      // Slidemenu
+
+      (function() {
+        var $body = document.body
+        , $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+        if ( typeof $menu_trigger !== 'undefined' ) {
+          $menu_trigger.addEventListener('click', function() {
+            $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+          });
+        }
+
+      }).call(this);
+
+
+      // FOUNDATION MODAL
+
+      $(document).foundation();
+
+    </script>
+
+  </body>
+</html>
