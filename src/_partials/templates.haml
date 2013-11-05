@@ -1,8 +1,8 @@
 // View for Leaderboard and Nearby Users mini profiles
 %script.mini-user-profile{:type => "text/template"}
-  .small-6.columns
+  .small-6.columns.img
     %img{:src => "{{ gravatarUrl }}" }
-  .small-6.columns
+  .small-6.columns.info
     %h4.user-nickname {{ nickname }}
     %p.user-rank {{ rank }}
     %button.slap{:type => "tiny button"} SLAP
@@ -13,7 +13,10 @@
     %img{:src => "{{ gravatarUrl }}" }
     %h2.user-nickname {{ nickname }}
     %h3.user-rank {{ rank }}
-    %button.slap{:type => "tiny button"} SLAP
+  .small-6.columns
+    %button.pending{:type => "tiny button"} SLAPS
+  .small-6.columns
+    %button.nearby{:type => "tiny button"} NEARBY
 
 // View for pending slaps
 %script.pending-slap{:type => "text/template"}
