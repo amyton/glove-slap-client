@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
 
   .header {
     background-color: $white;
+    box-shadow: 1px 2px 2px #C2C0B9;
     height: 50px;
     position: fixed;
     width: 100%;
@@ -65,23 +66,30 @@ h1, h2, h3, h4, h5, h6, p {
       box-shadow: 1px 1px 3px #ddd;
     }
 
-// INDEX.HAML /////////////////////////////////////////////////////
+// TEMPLATES.HAML /////////////////////////////////////////////////////
 
-
+.small-6.columns.info {
+  padding-top: 30px;
+}
 
 
 
 // PROFILE.HAML ///////////////////////////////////////////////////
+
+  .app.profile {
+    box-shadow: 1px 1px 3px #C2C0B9;
+  }
 
   .user-profile {
     background-color: $white;
     height: auto;
   }
 
+
 //TEMPLATES.HAML ///////////////////////////////////////////////////
 
   img {
-    border: 7px solid $turquoise;
+    border: 3px solid $gray-bg;
     border-radius: 50%;
     margin: 25px;
     width: 300px;
