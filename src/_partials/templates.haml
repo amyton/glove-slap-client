@@ -26,3 +26,20 @@
       %button.accept{:type => "tiny button"} ACCEP
     .small-6.columns
       %button.reject{:type => "tiny button"} REJECT
+
+// Template for gravatar email
+%script.gravatar-email{:type => "text/html"}
+  %form{:action => "http://localhost:3000/api/user/{{ id }}/gravatar", "data-remote" => "true", :method => "post"}
+    %h2 Hey!
+    %h3 You should really add a photo of yourself!
+    %p Just enter in your Gravatar e-mail:
+    %input{:placeholder => "me@example.com", :type => "email", :name => "email"}
+    %input{:type => "submit", :value => "submit"}
+    %p
+      %a{:href => "https://en.gravatar.com/site/signup/"} Sign up for Gravatar
+  %a.close-reveal-modal &#215;
+
+
+
+
+
