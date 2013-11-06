@@ -14,7 +14,7 @@
       console.log("slap button: werks", this.model.attributes);
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/api/user/'+ this.model.get('id') +'/slap',
+        url: serverhost + '/api/user/'+ this.model.get('id') +'/slap',
         data: { phone_id: g.phoneId },
         success: function (data) {
           console.log('I just Slaps', data);

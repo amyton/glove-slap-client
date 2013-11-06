@@ -44,7 +44,7 @@ $(document).ready(function (argument) {
   window.pubsub.on('location', function () {
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3000/api/user/pendingslaps',
+      url: serverhost + '/api/user/pendingslaps',
       data: {
         phone_id: g.phoneId
       },

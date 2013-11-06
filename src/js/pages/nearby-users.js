@@ -15,7 +15,7 @@ $(document).ready(function (argument) {
   window.pubsub.on('location', function () {
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3000/api/user/location',
+      url: serverhost + '/api/user/location',
       data: {
         phone_id: g.phoneId,
         latitude: g.position.coords.latitude,

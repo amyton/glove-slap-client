@@ -128,16 +128,16 @@
     <script type="text/javascript">
       $(document).ready(function(){
 
-        // $('#user').click( function(){
-        //   $.ajax({
-        //     type: 'POST',
-        //     url: 'http://limitless-journey-1073.herokuapp.com/api/slap/2/accept',
-        //     data: { phone_id: '1234' },
-        //     success: function (data) {
-        //       console.log('Gmoney is slapped by', data);
-        //     }
-        //   });
-        // });
+        $('#user').click( function(){
+          $.ajax({
+            type: 'POST',
+            url: serverhost + '/api/slap/2/accept',
+            data: { phone_id: '1234' },
+            success: function (data) {
+              console.log('Gmoney is slapped by', data);
+            }
+          });
+        });
 
 //Ajax to post user profile information
 
@@ -145,7 +145,7 @@
           return;
           $.ajax({
             type: 'GET',
-            url: 'http://localhost:3000/api/user/' + id + '/profile',
+            url: serverhost + '/api/user/' + id + '/profile',
             success: function (data) {
               console.log('User Data!', data);
               window.pubsub.trigger('profile-update', data);
