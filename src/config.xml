@@ -8,6 +8,14 @@
         PhoneGap Team
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
+    
+    <preference name="com.urbanairship.production_app_key" value="Your production app key" />
+    <preference name="com.urbanairship.production_app_secret" value="Your production app secret" />
+    <preference name="com.urbanairship.development_app_key" value="HlakLzDpS1qGbeOI1Iu6aw" />
+    <preference name="com.urbanairship.development_app_secret" value="6v56zn2US2-zP_A9RDO3mQ" />
+    <preference name="com.urbanairship.in_production" value="If the app is in production or not" />
+    <preference name="com.urbanairship.gcm_sender" value="659450115327" />
+
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />

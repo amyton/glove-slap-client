@@ -15,7 +15,7 @@
       return;
       $.ajax({
         type: 'POST',
-        url: 'http://limitless-journey-1073.herokuapp.com/api/user/1/slap',
+        url: 'http://localhost:3000/api/user/1/slap',
         data: { phone_id: '1235' },
         success: function (data) {
           console.log('GRHild Slaps', data);
