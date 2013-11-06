@@ -21,14 +21,15 @@
 // View for pending slaps
 %script.pending-slap{:type => "text/template"}
   .small-6.columns
+    %h4.user-nickname {{ challenger.nickname }}
+    // FIXIT: Need to take off 25px off img
     %img{:src => "{{ gravatarUrl }}" }
   .small-6.columns
-    %h4.user-nickname {{ nickname }}
-    %p.user-rank {{ rank }}
-    .small-6.columns
-      %button.accept{:type => "tiny button"} ACCEP
-    .small-6.columns
-      %button.reject{:type => "tiny button"} REJECT
+    / %p.user-rank {{ challenger.rank }}
+    / .small-6.columns
+    %button.accept{:type => "tiny button"} ACCEPT
+    / .small-6.columns
+    %button.reject{:type => "tiny button"} REJECT
 
 // Template for gravatar email
 %script.gravatar-email{:type => "text/html"}
