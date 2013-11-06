@@ -96,10 +96,10 @@
       <div id="templates">
         <!-- / View for Leaderboard and Nearby Users mini profiles -->
 <script class='mini-user-profile' type='text/template'>
-  <div class='small-6 columns'>
+  <div class='small-6 columns img'>
     <img src='{{ gravatarUrl }}' />
   </div>
-  <div class='small-6 columns'>
+  <div class='small-6 columns info'>
     <h4 class='user-nickname'>{{ nickname }}</h4>
     <p class='user-rank'>{{ rank }}</p>
     <button class='slap' type='tiny button'>SLAP</button>
@@ -111,7 +111,12 @@
     <img src='{{ gravatarUrl }}' />
     <h2 class='user-nickname'>{{ nickname }}</h2>
     <h3 class='user-rank'>{{ rank }}</h3>
-    <button class='slap' type='tiny button'>SLAP</button>
+  </div>
+  <div class='small-6 columns'>
+    <button class='pending' type='tiny button'>SLAPS</button>
+  </div>
+  <div class='small-6 columns'>
+    <button class='nearby' type='tiny button'>NEARBY</button>
   </div>
 </script>
 <!-- / View for pending slaps -->
@@ -163,7 +168,13 @@
           <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
 
         </div>
-
+      
+        <div id="testDiv">
+          <p></p>
+          <p></p>
+          <h4>testing area</h4>
+        </div>
+   
       </footer>
 
     </div> <!-- #content -->
@@ -171,6 +182,7 @@
     <!-- MODAL -->
     <div id="myModal" class="reveal-modal">
     </div> <!-- #myModal -->
+
 
 
     <!-- 3rd-party scripts -->
@@ -202,16 +214,16 @@
     <script type="text/javascript">
       $(document).ready(function(){
 
-        $('#user').click( function(){
-          $.ajax({
-            type: 'POST',
-            url: 'http://limitless-journey-1073.herokuapp.com/api/slap/2/accept',
-            data: { phone_id: '1234' },
-            success: function (data) {
-              console.log('Gmoney is slapped by', data);
-            }
-          });
-        });
+        // $('#user').click( function(){
+        //   $.ajax({
+        //     type: 'POST',
+        //     url: 'http://limitless-journey-1073.herokuapp.com/api/slap/2/accept',
+        //     data: { phone_id: '1234' },
+        //     success: function (data) {
+        //       console.log('Gmoney is slapped by', data);
+        //     }
+        //   });
+        // });
 
 //Ajax to post user profile information
 
@@ -219,13 +231,14 @@
           return;
           $.ajax({
             type: 'GET',
-            url: 'http://limitless-journey-1073.herokuapp.com/api/user/' + id + '/profile',
+            url: 'http://localhost:3000/api/user/' + id + '/profile',
             success: function (data) {
               console.log('User Data!', data);
               window.pubsub.trigger('profile-update', data);
             }
           });
-        });
+        })
+
       });
 
       // Slidemenu
