@@ -30,8 +30,4 @@ $(document).ready(function (argument) {
     });
   });
 
-  $('.listProfileInfo').append(profileListView.render());
-
-  profileListView.render();
-
 });
