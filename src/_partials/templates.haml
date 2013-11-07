@@ -33,7 +33,7 @@
 
 // Template for gravatar email
 %script.gravatar-email{:type => "text/html"}
-  %form{:action => serverhost + "/api/user/{{ id }}/gravatar", "data-remote" => "true", :method => "post"}
+  %form{:action => "{{ host }}/api/user/{{ id }}/gravatar", "data-remote" => "true", :method => "post"}
     %h2 Hey!
     %h3 You should really add a photo of yourself!
     %p Just enter in your Gravatar e-mail:

@@ -12,13 +12,12 @@
     },
     slap: function (e) {
       console.log("slap button: werks", this.model.attributes);
-      return;
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/api/user/1/slap',
-        data: { phone_id: '1235' },
+        url: serverhost + '/api/user/'+ this.model.get('id') +'/slap',
+        data: { phone_id: g.phoneId },
         success: function (data) {
-          console.log('GRHild Slaps', data);
+          console.log('I just Slaps', data);
         }
       });
     },

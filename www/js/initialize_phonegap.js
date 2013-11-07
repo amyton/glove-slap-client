@@ -1,5 +1,5 @@
 window.g = {};
-
+window.serverhost = "http://localhost:3000"
 //////////////
 // PHONE ID //
 //////////////

@@ -31,7 +31,7 @@ $(document).ready(function (argument) {
         console.log('user email:', response.user.email);
         user.set(response.user);
         if (!response.user.email) {
-          var htmlString = gravatarEmailTemplate({ id: response.user.id });
+          var htmlString = gravatarEmailTemplate({ id: response.user.id, host: "http://localhost:3000" });
           console.log("html:", htmlString);
           $('#myModal').html(htmlString);
           $('#myModal').foundation('reveal', 'open');

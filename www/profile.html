@@ -31,7 +31,7 @@
             <a href="profile.html">View Profile</a>
           </li>
           <li class="my-slaps">
-            <a href="my-slaps.html">My Slaps</a>
+            <a href="incoming-slaps.html">My Slaps</a>
           </li>
           <li class="nearby-users">
             <a href="nearby-users.html">Nearby Users</a>
@@ -96,22 +96,21 @@
 <!-- / View for pending slaps -->
 <script class='pending-slap' type='text/template'>
   <div class='small-6 columns'>
+    <h4 class='user-nickname'>{{ challenger.nickname }}</h4>
+    <!-- / FIXIT: Need to take off 25px off img -->
     <img src='{{ gravatarUrl }}' />
   </div>
   <div class='small-6 columns'>
-    <h4 class='user-nickname'>{{ nickname }}</h4>
-    <p class='user-rank'>{{ rank }}</p>
-    <div class='small-6 columns'>
-      <button class='accept' type='tiny button'>ACCEP</button>
-    </div>
-    <div class='small-6 columns'>
-      <button class='reject' type='tiny button'>REJECT</button>
-    </div>
+    <!-- %p.user-rank {{ challenger.rank }} -->
+    <!-- .small-6.columns -->
+    <button class='accept' type='tiny button'>ACCEPT</button>
+    <!-- .small-6.columns -->
+    <button class='reject' type='tiny button'>REJECT</button>
   </div>
 </script>
 <!-- / Template for gravatar email -->
 <script class='gravatar-email' type='text/html'>
-  <form action='http://localhost:3000/api/user/{{ id }}/gravatar' data-remote='true' method='post'>
+  <form action='{{ host }}/api/user/{{ id }}/gravatar' data-remote='true' method='post'>
     <h2>Hey!</h2>
     <h3>You should really add a photo of yourself!</h3>
     <p>Just enter in your Gravatar e-mail:</p>
@@ -177,6 +176,7 @@
     <script type="text/javascript" src="js/util.js"></script>
     <!-- Models -->
     <script type="text/javascript" src="js/models/profile.js"></script>
+    <script type="text/javascript" src="js/models/slap.js"></script>
     <!-- Views -->
     <script type="text/javascript" src="js/views/profile-view.js"></script>
     <script type="text/javascript" src="js/views/profile-list-view.js"></script>
@@ -188,16 +188,16 @@
     <script type="text/javascript">
       $(document).ready(function(){
 
-        // $('#user').click( function(){
-        //   $.ajax({
-        //     type: 'POST',
-        //     url: 'http://limitless-journey-1073.herokuapp.com/api/slap/2/accept',
-        //     data: { phone_id: '1234' },
-        //     success: function (data) {
-        //       console.log('Gmoney is slapped by', data);
-        //     }
-        //   });
-        // });
+        $('#user').click( function(){
+          $.ajax({
+            type: 'POST',
+            url: serverhost + '/api/slap/2/accept',
+            data: { phone_id: '1234' },
+            success: function (data) {
+              console.log('Gmoney is slapped by', data);
+            }
+          });
+        });
 
 //Ajax to post user profile information
 
@@ -205,7 +205,7 @@
           return;
           $.ajax({
             type: 'GET',
-            url: 'http://localhost:3000/api/user/' + id + '/profile',
+            url: serverhost + '/api/user/' + id + '/profile',
             success: function (data) {
               console.log('User Data!', data);
               window.pubsub.trigger('profile-update', data);
