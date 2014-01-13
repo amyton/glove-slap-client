@@ -1,6 +1,6 @@
 ##Game Slap
 
-#####Authors: Amy Ton & Greg Hild
+#####Developed by: Amy Ton & Greg Hild
 
 ####Repo Links
  * [Server Side] (http://github.com/GRHild/glove-slap)
